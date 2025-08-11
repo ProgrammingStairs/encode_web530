@@ -1,0 +1,26 @@
+Form Tag
+---------
+<form action="" method="get | post">
+<input type="text" id="" name="">
+       type="email"      (HTML5)
+       type="password"   (HTML5)
+       type="radio" 
+       type="checkbox"
+       type="date"       (HTML5)
+       type="time"       (HTML5)
+       type="month"      (HTML5)
+       type="week"       (HTML5)
+       type="file"
+       type="color"      (HTML5)
+       type="number"     (HTML5)
+       type="url"        (HTML5) 
+       type="submit"
+       type="reset"
+<fieldset> 
+<legend> ------Hello------ 
+<label for="id_name"> 
+<select>
+<option value="Red">Red Color</option>
+<button type="submit">
+        type="reset" 
+<textarea rows="" cols="">
