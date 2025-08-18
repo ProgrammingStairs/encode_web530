@@ -1,0 +1,38 @@
+Limitation of HTML : 
+--------------------
+1. No specific property for increasing size, in case of HTML we use <big> tag.
+2. We cannot customize div(section) size.
+3. Here we need to use table tag for dealing with sections for grid layout.
+4. Its difficult to manage the complete webpage with single table tag
+5. Usage of multiple table tag for creating web page is not good practise.
+6. Less properties 
+7. We cannot resize fieldset width
+8. we cannot change mark background color
+9. Its quite difficult to manage images.
+
+CSS : 
+----
+1. Full form of CSS is Cascading Style Sheet
+2. Css was developed by W3C (World wide web consortium) under the contributiom of Hakon wium lie to simplify the work of designers.
+3. As Html provides structure of a web page, where as css gives styling effects to our web page.
+4. As Html works on tags, Css works on properties corresponding to its value.
+5.  We can implement css by three ways : 
+    a. Inline CSS 
+    b. Internal CSS 
+    c. External CSS 
+6. Out of this three ways to implement CSS, priority goes to inline css but recommended way to use css is external css.
+7. Css provides different types of units to make web page responsive
+8. Css provides different ways to put color on web page 
+9. Css provides the concept of media query to make web page responsive
+10. CSS provides the concept of animation, transition, transformation and flex box concept to make web page. 
+----------------
+
+Inline CSS : 
+Syntax: 
+    <element_name style="color:red,font-size:20px">
+        .....
+    </element_name>
+
+    style is an attribute here
+    color and font-size are properties
+    red and 20px are values
