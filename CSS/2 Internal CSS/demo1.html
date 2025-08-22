@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Internal CSS -->
+     <style>
+        Selector : Selector helps in implementing properties corresponding to its value to the specified element.   
+        or in other words,
+        Selectors simply tells which properties corresponding to its values are going to implement on which specific element.
+
+        Types of selectors : 
+            1. Element Selector | Tag selector 
+            syntax : 
+            element_name{
+                property : value;
+                property : value;
+                 |           |
+            }    
+            example : 
+            div{
+                background-color: red;
+                font-size:45px;
+            }
+
+            2. Id selector (#)
+            3. Class selector (.)
+            
+            4. Universal selector (*)
+            syntax : 
+                *{
+                    property:value;
+                     |        |
+                }
+            example : 
+                *{
+                    color:red;
+                    font-size:45px;
+                }
+
+            5. Grouping selector (,)
+            syntax : 
+                element_name,element_name,....{
+                    property:value;
+                    property:value;
+                      |        |
+                }    
+            example : 
+                div , span {
+                    border-style : solid;
+                    color:red;
+                }    
+            
+
+            6. Descendant selector 
+            syntax:
+                outerElement innerElement subInnerElement ....{
+                    property : value;
+                } 
+            example : 
+                div p span {
+                    color:red;
+                }
+
+            7. Advanced selector 
+                i. Attribute selector 
+                ii. nth-of-type selector 
+                iii. Pseudo class selector (:)
+                iv. Pseudo element selector (::)
+                v. Adjacent sibling selector  (+)
+                vi. General sibling selector (~)
+                vii. Direct child selector (>)
+     </style>
+</head>
+<body>
+    <div></div>
+    <p></p>
+    <span></span>
+</body>
+</html>
