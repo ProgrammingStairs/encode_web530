@@ -1,0 +1,24 @@
+Units : 
+--------
+1. Px = Pixel = Picture Element
+
+Parent div
+    |-- height : 200px
+    |-- width : 500px 
+    
+Child div
+    |-- height : 100px
+    |-- width : 300px
+    
+On changing dimensions of parent : 
+Parent div
+    |-- height : 50px
+    |-- width : 250px 
+    
+Child div dimension remains same
+    |-- height : 100px
+    |-- width : 300px
+
+2. % percentage
+
+    
