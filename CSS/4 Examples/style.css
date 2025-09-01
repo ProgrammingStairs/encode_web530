@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+  font-family: "Epunda Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+        body{
+            background: url(banner1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #demo{
+            height:280px;
+            width: 500px;
+            /* border-style: solid; */
+            margin-left: 240px;
+            margin-top: 150px;
+        }
+        ::placeholder{
+            color:whitesmoke;
+        }
+        input[type="email"],input[type="password"]{
+            height: 26px;
+            width: 260px;
+            font-size: 16px;
+            margin:2px;
+            margin-left: 120px;
+            text-align: center;
+            outline: 0px;
+            /* border-top-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 0px; */
+            border-width: 0px 0px 1px 0px;
+            border-bottom-color: white;
+            background: transparent;
+        }
+        input[type="checkbox"]{
+            margin-left: 120px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"],input[type="reset"]{
+            height: 32px;
+            width: 265px;
+            font-size: 16px;
+            margin:2px;
+            border-width: 0px;
+            background-color: #234567;
+            color:white;
+            margin-left: 120px;
+            border-radius: 10px;
+        }
+        input[type="email"]:hover,input[type="password"]:hover{
+            border-color: red;
+        }
+        input[type="submit"]:hover,input[type="reset"]:hover{
+            background-color: tomato;
+            color:white;
+        }
+        span{
+            color:white;
+        }
