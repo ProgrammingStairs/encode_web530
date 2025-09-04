@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* universal selector */
+        *{ 
+            margin:0px;
+        }
+        /* class selector */
+        .bannerDiv{
+            height: 300px;
+            width: 100%;
+            /* border-style: solid; */
+            /* background-color: dodgerblue; */
+            background: url(bannerImg.webp);
+            background-size: cover;
+        }
+        /* class selector */
+        .userSection{
+            height: 130px;
+            width:130px;
+            /* border-style: solid; */
+            margin-left: 80px;
+            margin-top: -75px;
+            background-color: white;
+            border-radius: 50%;
+            padding: 10px;
+        }
+        /* Id selector */
+        #img{
+            height: 130px;
+            width:130px;
+            border-radius: 50%;
+        }
+        /* Id selector */
+        #searchSection{
+            height: 200px;
+            width: 1000px;
+            /* background-color: brown; */
+            margin: auto;
+        }
+        /* Advanced selector |  Attribute Selector */
+        input[type="text"]{
+            height:45px;
+            width: 600px;
+            font-size: 18px;
+            text-align: center;
+            margin-left: 110px;
+            margin-top: 50px;
+            border-radius: 20px 0px 0px 20px;
+            box-shadow: 1px 1px 50px 1px #234567;
+            border-width: 0px;
+            outline: 0px;
+        }
+        /* Element selector */
+        button{
+            height:50px;
+            margin-left: -4px;
+            border-width: 0px;
+            font-size: 18px;
+            width: 200px;
+            background-color: brown;
+            color:white;
+            border-radius: 0px 20px 20px 0px;
+          box-shadow: 1px 1px 50px 1px #234567;
+        }
+        button:hover{
+            background-color: #234567;
+        }
+    </style>
+</head>
+<body>
+    <div class="bannerDiv"></div>
+    <div class="userSection">
+        <img src="user.png" id="img" alt="user logo">
+    </div>
+    <div id="searchSection">
+        <input type="text" placeholder="Search Destination">
+        <button>Search Destination</button>
+    </div>
+</body>
+</html>
