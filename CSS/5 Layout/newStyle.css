@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    background-color: #234567;
+}
+#left{
+    height: 672px;
+    width: 25%;
+    float: left;
+    background-color: lightblue;
+    position: fixed;
+}
+#right{
+    height: auto;
+    width: 74%;
+    float: left;
+    background-color: #234567;
+    margin-left: 25%;
+}
+#upper{
+    width: 100%;
+    height:50%;
+    background-color: black;
+}
+#user{
+    height:150px;
+    width:150px;
+    margin-left: 75px;
+    margin-top: -75px;
+    background-color: white;
+    border-radius: 50%;
+}
+#box{
+    height: 150px;
+    width: 80%;
+    background-color: black;
+    border-radius: 20px;
+    margin: 40px;
+    margin-left: 100px;
+}

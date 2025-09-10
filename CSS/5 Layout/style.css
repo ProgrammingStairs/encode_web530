@@ -1,0 +1,52 @@
+  #header{
+            height: 70px;
+            width: 100%;
+            border-style: solid;
+        }
+        #logo{
+            height: 55px;
+            width: 55px;
+            border-style: solid;
+            margin-left: 20px;
+            margin-top: 5px;
+            border-radius: 50%;
+        }
+        #nav{
+            height: 50px;
+            width: 100%;
+            border-style: solid;
+        }
+        #nav ul{
+            margin-top: 10px;
+            list-style: none;
+        }
+        #nav ul li{
+            display: inline;
+        }
+        #nav ul li a{
+            color:red;
+            text-decoration: none;
+            font-family: candara;
+            font-size: 22px;
+            margin-left: 50px;
+        }
+        #nav ul li a:hover{
+            color:black;
+        }
+        #box{
+            height:460px;
+            width: 100%;
+            border-style: solid;
+        }
+        #box1{
+            height: 460px;
+            /* width: 409.5px; */
+            width: 33%;
+            border-style: solid;
+            float: left;
+        }
+        #footer{
+            height: 60px;
+            border-style: solid;
+            width:100%;
+        }
