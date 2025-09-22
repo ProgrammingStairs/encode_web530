@@ -150,3 +150,58 @@
     transform: scale(1.5);
     /* transform: rotate(360deg); */
 }
+#about{
+    height: 400px;
+    background-color: whitesmoke;
+    padding: 40px;
+}
+#aboutImg{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    margin-top: 40px;
+    /* background-color: black; */
+    float: left;
+}
+#aboutContent{
+    height: 290px;
+    width: 680px;
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding: 20px;
+    /* background-color: orange; */
+    text-align: justify;
+    font-size: 18px;
+    line-height: 26px;
+}
+#aboutImage{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+#contact{
+    height:400px;
+    padding: 40px;
+    background-color: purple;
+}
+#contactBox{
+    height: 300px;
+    width: 200px;
+    margin: 10px;
+    margin-top: 30px;
+    float: left;
+    padding: 10px;
+    background-color: grey;   
+}
+#contactMBox{
+    height: 320px;
+    width: 310px;
+    margin: 10px;
+    margin-top: 30px;
+    float: left;
+}
+iframe{
+    height: 320px;
+    width: 310px;
+}
