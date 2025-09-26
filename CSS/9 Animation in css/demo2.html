@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 200px;
+            width: 200px;
+            background-color: crimson;
+            animation-name: myAnimate;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes myAnimate {
+            0% {background-color: dodgerblue;}
+            25% {background-color: olive;}
+            50% {background-color: magenta;}
+            75% {background-color: goldenrod;}
+            100% {background-color: teal;}
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>
