@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+        }
+        #box{
+            background-color: red;
+            animation-name: myAnimate;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            position: absolute;
+        }
+        @keyframes myAnimate {
+            0% {
+                top:0;
+                left:0;
+            }
+            50% {
+                top:400px;
+                left:400px;
+            }
+            75% {
+                top:400px;
+                left:0;
+            }
+            100% {
+                top:0;
+                left:0;
+            }
+        }
+        #box1{
+            background-color: purple;
+            animation-name: myAnimate1;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            position: absolute;
+        }
+        @keyframes myAnimate1 {
+            0% {
+                top:0;
+                left:150px;
+            }
+            25% {
+                top:0;
+                left:600px;
+            }
+            50% {
+                top:600px;
+                left:600px;
+            }
+            75% {
+                top:600px;
+                left:150px;
+            }
+            100% {
+                top:0;
+                left:150px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <div id="box1"></div>
+
+</body>
+</html>
