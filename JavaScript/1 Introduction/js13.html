@@ -1,0 +1,52 @@
+<script>
+    /*
+        Type Coercion
+            1. Number to string
+            2. String to number
+            3. Boolean to number 
+            4. Equality
+    */
+
+   // Number to string 
+   var num = 100;
+   var res1 = num + "100";
+   document.write("<br>typeof num : "+typeof num);
+   document.write("<br>res1 : "+res1);
+   document.write("<br>typeof res1 : "+typeof res1);
+
+   // String to number 
+   var num = 10;
+   var res1 = num - "100";
+   document.write("<br><br>typeof num : "+typeof num);
+   document.write("<br>res1 : "+res1);
+   document.write("<br>typeof res1 : "+typeof res1);
+
+   // Boolean to number 
+   var num = false;
+   var res1 = num + 34;
+   document.write("<br><br>typeof num : "+typeof num);
+   document.write("<br>res1 : "+res1);
+   document.write("<br>typeof res1 : "+typeof res1);
+ 
+    // Equality
+    var num = null == null;
+    document.write("<br><br>num : "+num);
+
+    var num = null == undefined;
+    document.write("<br>num : "+num);
+
+    var num = null == false;
+    document.write("<br>num : "+num);
+
+    var num = null == 0;
+    document.write("<br>num : "+num);
+
+    var num = null <= 0;
+    document.write("<br>num : "+num);
+
+</script>
+
+<!-- if(0) = false
+if('') = false
+if(undefined) = false
+if(null) = false -->
