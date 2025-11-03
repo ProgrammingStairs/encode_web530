@@ -1,0 +1,11 @@
+<script>
+    var num=10,i=1;
+    switch(i++){ // i=1
+        case -2 : num++;
+        case 2 : --num;
+        case 1 : num++; // 10 ---> 11
+        case -3 : num--; // 11 ----> 10
+        default : document.write("number : "+num--); // 10 ---->9
+                    break;
+    }
+</script>

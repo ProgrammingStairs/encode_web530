@@ -1,0 +1,12 @@
+<script>
+    var num = prompt("Enter Number");
+    if(isNaN(num)){
+        alert("Please enter valid number");
+    }else{
+        var str='';
+        for(var i=1;i<=10;i++){
+            str += num+" x "+i+" = "+(num*i)+"\n"; 
+        }
+        alert(str);
+    }
+</script>
