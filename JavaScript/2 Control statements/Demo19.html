@@ -1,0 +1,19 @@
+<script>
+var num = prompt("Enter Number");
+    if(isNaN(num)){
+        alert("Please enter valid number");
+    }else{
+        // outer loop
+        for(var i=1;i<=num;i++){
+            var ch='A';
+            // inner loop
+            for(var j=1;j<=i;j++){
+                // document.write("*");
+                // document.write(i);
+                // document.write(j);
+                document.write(String.fromCharCode(64+j));
+            }
+            document.write("<br>");
+        }
+    }
+</script>

@@ -1,0 +1,25 @@
+<script>
+    var arr = [12,23,34,45,56];
+    document.write(arr);
+
+    // normal for loop
+    for(var i=0;i<arr.length;i++){
+        document.write("<br>arr["+i+"] : "+arr[i]);
+    }
+    document.write("<br>----------------------------");
+    // for in loop -- works on index
+    for(var index in arr){
+        document.write("<br>arr["+index+"] : "+arr[index]);
+    }
+    document.write("<br>----------------------------");
+    // for of loop -- works on value
+    for(var value of arr){
+        document.write("<br>value : "+value);
+    }
+    document.write("<br>----------------------------");
+    // for each loop
+    arr.forEach(function(element){
+        document.write("<br>element : "+element);
+    })
+</script>
+
