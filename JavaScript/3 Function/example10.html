@@ -1,0 +1,19 @@
+<script>
+    // lambda expression | fat arrow function
+    /* 
+    var addition = ()=>{  // no return type
+        var num1 = parseInt(prompt("Enter first number"));
+        var num2 = parseInt(prompt("Enter second number"));
+        var res = num1+num2;
+        document.write("Sum : "+res);
+    }
+    addition(); // no argument
+    */ 
+
+   var num1 = parseInt(prompt("Enter first number"));
+   var num2 = parseInt(prompt("Enter second number")); 
+   var addition = (x,y)=>{  // no return type
+        document.write("Sum : "+(x+y));
+    }
+    addition(num1,num2); // with argument
+</script>

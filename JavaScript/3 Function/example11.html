@@ -1,0 +1,17 @@
+<script>
+    // immediately invoked function expression
+   var num1 = parseInt(prompt("Enter first number"));
+   var num2 = parseInt(prompt("Enter second number")); 
+ 
+   /*
+   (function(x,y){
+     document.write("Sum : "+(x+y));
+   })(num1,num2);
+   */
+
+    var res = (function(x,y){
+     return x+y;
+    })(num1,num2);
+    document.write("Sum : "+res);
+
+</script>
