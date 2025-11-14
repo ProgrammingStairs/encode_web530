@@ -1,0 +1,17 @@
+<!-- Example of Array -->
+ <script>
+    var arr = [14,2,543,24,509,6];
+    document.write("<br>Array elements are : "+arr);
+    document.write("<br>Result : "+arr.slice(1,4));
+    document.write("<br>Result : "+arr.slice(2));
+    document.write("<br>Result : "+arr.slice(-2));
+    document.write("<br>Result : "+arr.slice(1,-3));
+
+    arr.splice(2,0,"Red");
+    document.write("<br>Result : "+arr);
+    arr.splice(2,3);
+    document.write("<br>Result : "+arr);
+    arr.splice(2,1,"Green","White");
+    document.write("<br>Result : "+arr);
+
+</script>

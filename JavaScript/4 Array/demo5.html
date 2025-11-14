@@ -1,0 +1,58 @@
+<!-- Example of Array -->
+ <script>
+    var arr = [14,29,1,24,509,6];
+    document.write("<br>Array elements are : "+arr+"<br>");
+
+    // document.write("<br>");
+    // arr.filter((element)=>{
+    //     document.write(" "+element); 
+    // });
+    // document.write("<br>");
+    // var res = arr.filter((element)=>{
+    //      return element>30;
+    // });
+    // document.write("<br>Array elements are : "+res);
+
+    // arr.find((element)=>{
+    //     document.write(" "+element); 
+    // });
+    // document.write("<br>");
+    // var res = arr.find((element)=>{
+    //      return element>30;
+    // });
+    // document.write("<br>Array elements are : "+res);
+
+    // arr.forEach((element)=>{
+    //     document.write(" "+element); 
+    // });
+    // document.write("<br>");
+    // var res = arr.forEach((element)=>{
+    //      return element>30;
+    // });
+    // document.write("<br>Array elements are : "+res);
+
+    // arr.some((element)=>{
+    //     document.write(" "+element); 
+    // });
+    // document.write("<br>");
+    // var res = arr.some((element,index)=>{
+    //     document.write("<br>index : "+index);
+    //     return element>30;
+    // });
+    // document.write("<br>Array elements are : "+res);
+
+    
+    // document.write("<br>");
+    // var res = arr.every((element,index)=>{
+    //      document.write("<br>index : "+index);
+    //      return element>1;
+    // });
+    // document.write("<br>Array elements are : "+res);
+
+    var res = arr.reduce((element1,element2)=>{
+        document.write("<br>element1 : "+element1+" element2 : "+element2);
+        return element1+element2;
+    },0);
+    document.write("<br>Array elements are : "+res);
+
+</script>

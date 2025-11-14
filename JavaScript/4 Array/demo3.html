@@ -1,0 +1,18 @@
+<!-- Example of Array -->
+ <script>
+    var arr = [14,2,543,24,509,6];
+    document.write("<br>Array elements are : "+arr);
+    document.write("<br>sort : "+arr.sort()); // maily used for single digit sorting
+    document.write("<br>sort : "+arr.sort(function(a,b){
+        return a-b;
+    }));
+    document.write("<br>sort : "+arr.sort(function(a,b){
+        return b-a;
+    }));
+    document.write("<br>Array elements are : "+arr.join());
+    document.write("<br>Array elements are : "+arr.join(""));
+    document.write("<br>Array elements are : "+arr.join("-"));
+    document.write("<br>Array elements are : "+arr.join(" , "));
+    document.write("<br>Result : "+arr.includes(543));
+
+ </script>

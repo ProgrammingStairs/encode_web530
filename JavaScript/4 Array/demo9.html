@@ -1,0 +1,17 @@
+<script>
+    var arr = [];
+    var size = parseInt(prompt("Enter size : "));
+    alert("Click Ok to Enter Array elements");
+    for(var i=0;i<size;i++){
+        arr[i] = parseInt(prompt("Enter Element : "));
+    }
+    document.write("<br>Array elements are : "+arr);
+    for(var i=0;i<size/2;i++){
+        temp = arr[i];
+        arr[i] = arr[size-1-i];
+        arr[size-1-i] = temp;
+    }
+
+    document.write("<br>Array elements in reversing order : "+arr);
+    
+</script>

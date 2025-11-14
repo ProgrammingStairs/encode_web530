@@ -1,0 +1,15 @@
+<!-- Example of Array -->
+ <script>
+    var arr = [14,2,543,24,509,6];
+    document.write("<br>Array elements are : "+arr);
+
+    document.write("<br>Minimum element : "+Math.min(14,2,543,24,509,6));
+    document.write("<br>Maximum element : "+Math.max(14,2,543,24,509,6));
+
+    document.write("<br>Minimum element : "+Math.min(...arr));
+    document.write("<br>Maximum element : "+Math.max(...arr));
+
+    document.write("<br>Minimum element : "+Math.min.apply(null,arr));
+    document.write("<br>Maximum element : "+Math.max.apply(null,arr));
+
+ </script>

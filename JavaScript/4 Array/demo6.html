@@ -1,0 +1,23 @@
+<script>
+    var arr = [34,45,56,6,78];
+
+    document.write("Array elements  are : "+arr+"<br>");
+
+    arr.map((element,index)=>{
+        document.write(element+" ");
+    });
+
+    document.write("<br>");
+    var res = arr.map((element,index)=>{
+        document.write(element+" ");
+    });
+    document.write("<br>Array elements are : "+res);
+
+    document.write("<br>");
+    var res = arr.map((element,index)=>{
+        // return element>30;
+        return element>30 ? "valid" : "Invalid";
+    });
+    document.write("<br>Array elements are : "+res);
+
+</script>
