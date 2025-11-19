@@ -7,7 +7,7 @@
     <script>
         function myFun(){
             alert("Button Clicked");
-        }
+        }  
     </script>
 </head>
 <body>
@@ -15,5 +15,12 @@
     <button ondblclick="alert('Button Clicked')">Click</button>
     <button oncontextmenu="alert('Button Clicked')">Click</button>
     <button onclick="myFun()">Click</button>
+    <button id="demo">Click</button>
+    <script>
+                var element = document.getElementById("demo");
+                element.addEventListener("click",()=>{
+                    alert("Button clicked");
+                })
+    </script>
 </body>
 </html>

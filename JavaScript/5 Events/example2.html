@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // console.log(Date());
+        // console.log(typeof Date());
+        // console.log(new Date());
+        // console.log(typeof new Date());
+        
+        function myFun(obj){
+            var d = new Date();
+            obj.innerHTML = d.toLocaleDateString();
+        }
+        function displayDate(){
+            var d = new Date();
+            document.getElementById("display").innerHTML = d.toLocaleTimeString();
+        }
+        setInterval(displayDate,1000);
+    </script>
+</head>
+<body>
+    <p id="display"></p>
+    <button onclick="document.getElementById('show').innerHTML = Date()">Click</button>
+    <button onclick="this.innerHTML = Date()">Click</button>
+    <button onclick="this.innerHTML = new Date().toLocaleTimeString()">Click</button>
+    <button  onclick="myFun(this)">Click</button>
+    <p id="show"></p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>   
+    function changeColor(color,elem){
+        var element = document.getElementById("body");
+        element.style.backgroundColor = color;
+        elem.style.backgroundColor = color;
+    } 
+    </script>
+</head>
+<body id="body">
+    <button onclick="changeColor('olive',this)">Olive</button>
+    <button onclick="changeColor('tomato',this)">Tomato</button>
+    <button onclick="changeColor('tan',this)">Tan</button>
+</body>
+</html>
