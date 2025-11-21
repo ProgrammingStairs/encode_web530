@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFun1(){
+            document.getElementById("demo1").style.textDecoration="underline";
+        }
+        function myFun2(){
+            document.getElementById("demo2").style.textDecoration="line-through";
+        }
+        function myFun3(){
+            document.getElementById("demo3").style.textTransform="uppercase";
+        }
+        function myFun4(){
+            document.getElementById("demo4").style.textTransform="capitalize";
+        }
+        function myFun5(){
+            document.getElementById("demo5").style.color="red";
+        }
+        function myFun6(){
+            document.getElementById("demo6").style.fontFamily="cursive";
+        }
+        function myFun7(){
+            document.getElementById("demo7").style.backgroundColor="silver";
+        }
+
+</script>
+</head>
+<body>
+    <span id="demo1" onmouseover = "myFun1()">Lorem ipsum dolor sit amet.</span><br>
+    <span id="demo2" onmousemove = "myFun2()">Lorem ipsum dolor sit amet.</span><br>
+    <span id="demo3" onmouseleave = "myFun3()">Lorem ipsum dolor sit amet.</span><br>
+    <span id="demo4" onmouseup = "myFun4()">Lorem ipsum dolor sit amet.</span><br>
+    <span id="demo5" onmousedown = "myFun5()">Lorem ipsum dolor sit amet.</span><br>
+    <span id="demo6" onmouseenter = "myFun6()">Lorem ipsum dolor sit amet.</span><br>
+    <span id="demo7" onmousewheel = "myFun7()">Lorem ipsum dolor sit amet.</span><br>
+</body>
+</html>

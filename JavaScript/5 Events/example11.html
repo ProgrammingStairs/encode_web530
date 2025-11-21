@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 10px;
+            height: auto;
+            padding: 20px;
+            background-color: red;
+        }
+        h1{
+            padding:10px;
+            background-color: blue;
+            margin: 20px;
+        }
+        p{
+            background-color: orange;
+            padding:5px;
+            margin: 40px;
+
+        }
+    </style>
+    <script>
+        function over(){
+            document.getElementById("over").innerHTML++;
+        }
+        function move(){
+            document.getElementById("move").innerHTML++;
+        }
+        function enter(){
+            document.getElementById("enter").innerHTML++;
+        }
+    </script>
+</head>
+<body>
+    <div onmouseover="over()">
+        <h1>MouseOver | Count : <span id="over">0</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, totam sit, corporis unde assumenda rem beatae excepturi sapiente eaque voluptatum ullam? Voluptatem culpa delectus, sit corrupti aut hic ratione temporibus?</p>
+    </div>
+    <div onmouseenter="enter()">
+        <h1>MouseEnter | Count : <span id="enter">0</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, totam sit, corporis unde assumenda rem beatae excepturi sapiente eaque voluptatum ullam? Voluptatem culpa delectus, sit corrupti aut hic ratione temporibus?</p>
+    </div>
+    <div onmousemove="move()">
+        <h1>MouseMove | Count : <span id="move">0</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, totam sit, corporis unde assumenda rem beatae excepturi sapiente eaque voluptatum ullam? Voluptatem culpa delectus, sit corrupti aut hic ratione temporibus?</p>
+    </div>
+
+</body>
+</html>

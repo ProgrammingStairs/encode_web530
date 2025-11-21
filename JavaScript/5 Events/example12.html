@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfun1(){
+            document.getElementById("demo").style.backgroundColor="#234567";
+            document.getElementById("demo").style.color="white";
+        }
+        function myfun2(){
+            document.getElementById("demo").style.backgroundColor="white";
+            document.getElementById("demo").style.color="#234567";
+        }
+    </script>
+</head>
+<body onload="alert('Welcome User');">
+    <input type="text" id="demo" placeholder="Enter Text" onblur="myfun2()" onfocus="myfun1()">
+</body>
+</html>

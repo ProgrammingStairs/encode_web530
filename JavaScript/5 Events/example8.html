@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo{
+            height: 200px;
+            width: 500px;
+            border-style: solid;
+        }
+    </style>
+    <script>   
+        function setColor(){
+            var color = document.getElementById("color").value;
+            document.getElementById("demo").style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <div id="demo"></div>
+    <select name="color" id="color" onchange="setColor()">
+        <option value="">Transparent</option>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+        <option value="Purple">Purple</option>
+        <option value="Orange">Orange</option>
+    </select>
+</body>
+</html>
