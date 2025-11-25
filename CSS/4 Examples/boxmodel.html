@@ -1,0 +1,140 @@
+1.Write a Java program using JDBC to fetch all student names from the students table and store them into an ArrayList<String>.
+After storing, sort the list alphabetically and print it.
+
+2. Check whether array is palindrome or not
+
+3. Reverse words of all the string entered by the user 
+ input : Hello user how are you ? 
+ output : ? you are how user Hello
+
+4. Example showing the concept of refe rence to a constructor example.
+
+1️⃣ What is JDBC? Explain its architecture.
+Include DriverManager, Connection, Statement, ResultSet, and Drivers.
+
+2️⃣ What are different types of JDBC drivers?
+Explain Type-1, Type-2, Type-3, Type-4 drivers.
+
+3️⃣ What is the difference between Statement, PreparedStatement, and CallableStatement?
+4️⃣ What is ResultSet? What are different types of ResultSet?
+Explain TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITIVE.
+
+5️⃣ What is JDBC batch processing? Why is it used?
+6️⃣ What is the purpose of Class.forName() in JDBC?
+7️⃣ Why should we close JDBC resources? Which resources must be closed?
+
+Connection, Statement, PreparedStatement, ResultSet.
+
+8️⃣ What is connection pooling? Why is it useful in JDBC?
+9️⃣ What are the main interfaces in the Java Collections Framework?
+
+List, Set, Map, Queue, Iterator.
+
+🔟 Differentiate between ArrayList and LinkedList.
+1️⃣1️⃣ What is the difference between HashMap and TreeMap?
+1️⃣2️⃣ What is the difference between HashSet and TreeSet?
+1️⃣3️⃣ How does Collections.sort() work? What interface must objects implement to be sortable?
+
+Comparable or Comparator.
+
+1️⃣4️⃣ What is the difference between Comparable and Comparator?
+1️⃣5️⃣ Why do we store database records in Java Collections?
+
+Explain benefits: caching, sorting, filtering, iteration, in-memory operations.
+
+1️⃣ What is a Database Connection in JDBC?
+A physical link between the Java application and the database created using DriverManager.getConnection().
+
+2️⃣ What is the role of DriverManager in JDBC?
+It loads and manages database drivers and establishes connections to the database.
+
+3️⃣ What is PreparedStatement? Why is it preferred over Statement?
+It is a precompiled SQL statement which
+
+prevents SQL Injection
+increases performance
+supports dynamic parameters (?)
+
+4️⃣ What is the purpose of setAutoCommit(false)?
+It disables auto-commit mode so multiple SQL operations can be grouped as a transaction.
+
+5️⃣ What is a Transaction in JDBC?
+A group of SQL statements executed as a single unit.
+If any operation fails → rollback; else commit.
+
+6️⃣ What is Savepoint in JDBC?
+A checkpoint in a transaction from where you can roll back partially.
+
+7️⃣ What is CallableStatement?
+It is used to call stored procedures and functions in the database.
+
+8️⃣ What is Iterator in Collections?
+Used to iterate over List/Set elements one by one with hasNext() and next() methods.
+
+9️⃣ What is the difference between Iterator and ListIterator?
+Iterator → forward traversal only
+
+ListIterator → forward + backward traversal, but only works for List
+
+🔟 What is the difference between List and Set?
+List → ordered, allows duplicates
+Set → unordered, does NOT allow duplicates
+
+1️⃣1️⃣ What is a Map in Java?
+A collection of key-value pairs where keys must be unique (e.g., HashMap, TreeMap).
+
+1️⃣2️⃣ What is the difference between HashMap and Hashtable?
+Feature	HashMap	Hashtable
+Thread Safe	❌ No	✔ Yes
+Performance	Faster	Slower
+Null Keys/Values	Allowed	Not Allowed
+
+1️⃣3️⃣ What is the difference between fail-fast and fail-safe iterators?
+Fail-fast → throws ConcurrentModificationException if structure is modified (e.g., ArrayList Iterator).
+Fail-safe → works on a copy, no exception (e.g., ConcurrentHashMap iterator).
+
+1️⃣4️⃣ What is Autoboxing and Unboxing?
+Autoboxing → converting primitive to wrapper class automatically
+Unboxing → converting wrapper class back to primitive
+
+Example:
+
+int x = 10;  
+Integer y = x; // autoboxing  
+int z = y; // unboxing
+
+1️⃣5️⃣ Why is Collections Framework used in Java?
+Because it provides
+reusable data structures
+algorithms (sort, search)
+performance optimization
+type safety (generics)
+easy iteration
+
+reduces coding effort
+
+1️⃣ What is Java?
+Java is a high-level, object-oriented, platform-independent programming language that uses the JVM (Java Virtual Machine) to run code.
+
+2️⃣ What is JDK, JRE, and JVM?
+JDK (Java Development Kit): Tools + compiler + JRE
+JRE (Java Runtime Environment): JVM + libraries
+JVM (Java Virtual Machine): Executes Java bytecode
+
+3️⃣ What is OOPS? Name OOPS principles.
+4️⃣ What is the difference between Class and Object?
+5️⃣ What is Constructor? Types?
+6️⃣ What is Method Overloading and Overriding?
+7️⃣ What is the difference between Abstract Class and Interface?
+Feature	Abstract Class	Interface
+Methods	Can have both abstract & non-abstract	Only abstract (till Java 7), + default/static from Java 8
+Multiple Inheritance	❌ No	✔ Yes
+Variables	final or non-final	Always public static final
+8️⃣ What is the use of this keyword?
+9️⃣ What is super keyword?
+🔟 What is final keyword?
+1️⃣1️⃣ What is Exception Handling?
+1️⃣2️⃣ What is the difference between checked and unchecked exceptions?
+1️⃣3️⃣ What is a package?
+1️⃣4️⃣ What is multithreading?
+1️⃣5️⃣ Life cycle of a thread?

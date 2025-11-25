@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            height: 500px;
+            width: 900px;
+            border-style: solid;
+            margin: auto;
+        }
+        #upperdiv{
+            height: 300px;
+            width: 880px;
+            margin: 7px;
+            border-style: solid;
+        }
+        #biggerImg{
+            height: 300px;
+            width: 880px;
+        }
+        #lowerdiv{
+            height: 160px;
+            width: 880px;
+            margin: 7px;
+            border-style: solid;
+        }
+        #innerdiv{
+            height: 140px;
+            border-style: solid;
+            float: left;
+            width: 195px;
+            margin: 10px;
+        }
+        #smallerImg{
+            height: 140px;
+            width: 195px;
+        }
+    </style>
+    <script>
+        function changeImage(element){
+            var biggerImgElement = document.getElementById("biggerImg");
+            var smallerImgElement = element;
+
+            var temp = biggerImgElement.src;
+            biggerImgElement.src = smallerImgElement.src;
+            smallerImgElement.src = temp;
+        }
+    </script>
+</head>
+<body>
+    <div id="outer">
+        <div id="upperdiv">
+            <img src="images/img1.jpg" id="biggerImg" alt="">
+        </div>
+        <hr>
+        <div id="lowerdiv">
+            <div id="innerdiv" >
+                <img src="images/img2.jpg" id="smallerImg" onclick="changeImage(this)" alt="">
+            </div>
+            <div id="innerdiv" >
+                <img src="images/img3.jpg" id="smallerImg" onclick="changeImage(this)" alt="">
+            </div>
+            <div id="innerdiv" >
+                <img src="images/img4.jpg" id="smallerImg" onclick="changeImage(this)" alt="">
+            </div>
+            <div id="innerdiv" >
+                <img src="images/img5.jpg" id="smallerImg" onclick="changeImage(this)" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

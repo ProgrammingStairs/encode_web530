@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var replaceImage = "images/glowbulb.jpg";
+        function myFun(){
+            var activeImage = document.getElementById("activeImage");
+            //console.log("\n\nactiveImage.src : ",activeImage.src);
+            var store = activeImage.src;
+            //console.log("store : ",store);
+            activeImage.src = replaceImage;
+            //console.log("replaceimage : ",replaceImage);             
+            //console.log("activeImage.src : ",activeImage.src);
+            replaceImage = store;
+            //console.log("replaceimage : ",replaceImage);
+        }
+    </script>
+</head>
+<body>
+    <img id="activeImage" src="images/offbulb.jpg" height="400" width="200" alt=""> <br>
+    <button onclick="myFun()">Click</button>
+</body>
+</html>
