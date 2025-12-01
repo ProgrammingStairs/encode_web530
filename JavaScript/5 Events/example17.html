@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show(){
+            document.getElementById("item1").checked ? alert(document.getElementById("item1").value) : "";
+
+            document.getElementById("item2").checked ? alert(document.getElementById("item2").value) : "";
+
+            document.getElementById("item3").checked ? alert(document.getElementById("item3").value) : "";
+
+            document.getElementById("item4").checked ? alert(document.getElementById("item4").value) : "";
+
+            document.getElementById("item5").checked ? alert(document.getElementById("item5").value) : "";
+
+        }
+    </script>
+</head>
+<body>
+    <h2>JavaScript Example</h2>
+    <input type="radio" id="item1" value="Coffee" name="demo">Coffee <br>
+    <input type="radio" id="item2" value="Tea" name="demo">Tea <br>
+    <input type="radio" id="item3" value="Chocolate Shake" name="demo">Chocolate Shake <br> 
+    <input type="radio" id="item4" value="Juice" name="demo">Juice <br>
+    <input type="radio" id="item5" value="Ice Cream" name="demo">Ice Cream <br>
+    <button onclick="show()">Click</button>
+</body>
+</html>

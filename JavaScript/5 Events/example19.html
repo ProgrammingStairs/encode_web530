@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show(){
+            var items = document.getElementsByClassName("demo");
+            var item='';
+            for(i=0;i<items.length;i++){
+                items[i].checked ? item += items[i].value+" ": ""
+            }
+            if(item)
+                alert("You selected : "+item);
+            else
+                alert("You haven't selected any item");
+        }
+    </script>
+</head>
+<body>
+    <h2>JavaScript Example</h2>
+    <input type="checkbox" class="demo" id="item1" value="Coffee">Coffee <br>
+    <input type="checkbox" class="demo" id="item2" value="Tea">Tea <br>
+    <input type="checkbox" class="demo" id="item3" value="Chocolate Shake">Chocolate Shake <br> 
+    <input type="checkbox" class="demo" id="item4" value="Juice">Juice <br>
+    <input type="checkbox" class="demo" id="item5" value="Ice Cream">Ice Cream <br>
+    <button onclick="show()">Click</button>
+</body>
+</html>
