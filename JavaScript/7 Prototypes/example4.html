@@ -1,0 +1,25 @@
+<script>
+    var a = prompt("Enter first number");
+    var b = prompt("Enter second number");
+
+    function Demo(a){
+        this.setData = (b)=>{
+            this.a = a;
+            this.b = b;
+        }
+        this.printData = ()=>{
+            document.write("<br>a : "+this.a);
+            document.write("<br>b : "+this.b);
+            document.write("<br>c : "+this.c);
+        }
+    }
+    Demo.prototype.c = 300;
+    Demo.prototype.title = ()=>{
+        document.write("<h3>Example of Prototype</h3>");
+    }
+    var obj = new Demo(a);
+    obj.title();
+    obj.setData(b);
+    obj.printData();
+</script>
+

@@ -1,0 +1,24 @@
+<script>
+    /*
+        var = ES5 (function scopic)
+        let = ES6  (block scopic)
+        const = ES6 (block scopic) 
+    */
+   let a = 100;
+   document.write("<br>outside block a : "+a);
+   a = 200;
+   document.write("<br>outside block a : "+a);
+   {
+    let a = 300;
+    document.write("<br>inside block a : "+a);
+    }
+    document.write("<br>outside block a : "+a);
+    function show(){
+        let a = 400;
+           document.write("<br>inside function a : "+a);
+    }
+    show();
+    document.write("<br>outside function a : "+a);
+
+</script>
+
