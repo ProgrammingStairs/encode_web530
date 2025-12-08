@@ -1,0 +1,17 @@
+<script>
+    var obj = {
+        name: "Andrew",
+        address : {
+            city:"Indore",
+            state:"Madhya Pradesh"
+        },
+        pincode : 452010,
+        isAdmin: false,
+        subjects : ['C','C++','Java'],
+        toString(){
+            return "<br>Name : "+this.name+"<br>City : "+this.address.city+"<br>State : "+this.address.state+"<br>Pincode : "+obj.pincode+"<br>isAdmin : "+obj.isAdmin+"<br>Subjects : "+obj.subjects;
+        }
+    }
+    document.write("<br>object : "+obj);
+
+</script>

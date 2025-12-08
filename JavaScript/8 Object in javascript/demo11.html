@@ -1,0 +1,39 @@
+<button onclick="showData()">Click to Show Table Data</button>
+<p id="show"></p>
+<script>
+    function showData(){
+    var arr = [
+        {name:"Andrew Anderson",age:56,address:"Indore"},
+        {name:"Peter Parker",age:21,address:"Bhopal"},
+        {name:"Andrew Anderson",age:56,address:"Indore"},
+        {name:"Peter Parker",age:21,address:"Bhopal"},
+        {name:"Andrew Anderson",age:56,address:"Indore"},
+        {name:"Peter Parker",age:21,address:"Bhopal"},
+        {name:"Andrew Anderson",age:56,address:"Indore"},
+        {name:"Peter Parker",age:21,address:"Bhopal"},
+        {name:"Andrew Anderson",age:56,address:"Indore"},
+        {name:"Peter Parker",age:21,address:"Bhopal"},
+        {name:"Andrew Anderson",age:56,address:"Indore"},
+        {name:"Peter Parker",age:21,address:"Bhopal"},
+        {name:"Andrew Anderson",age:56,address:"Indore"},
+        {name:"Peter Parker",age:21,address:"Bhopal"},
+        {name:"Andrew Anderson",age:56,address:"Indore"},
+        {name:"Peter Parker",age:21,address:"Bhopal"},
+    ]
+
+    var table = `<table border='1' cellspacing='0' cellpadding='8'><tr><th>S.No</th><th>Name</th><th>Age</th><th>Address</th></tr>`
+    var count=1;
+    for(var value of arr){
+        table+=`<tr><td>${count++}</td>`
+        for(var key in value){
+            table+=`<td>${value[key]}</td>`
+        }
+        table+=`</tr>`
+    }
+    table+=`</table>`;
+
+    document.getElementById("show").innerHTML = table;
+
+    }
+
+</script>
