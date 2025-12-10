@@ -1,0 +1,40 @@
+<script>
+    // js object
+
+    var js_object = {
+        username : "Andrew Anderson",
+        age : 56
+    }
+    document.write("<br><br>typeof js_object : "+typeof js_object);
+    document.write("<br>username : "+js_object.username);
+    document.write("<br>age : "+js_object.age);
+
+    // json object
+
+    var json_object = {
+        "username" : "Andrew Anderson",
+        "age" : 56
+    }
+    document.write("<br><br>typeof json_object : "+typeof json_object);
+    document.write("<br>username : "+json_object.username);
+    document.write("<br>age : "+json_object.age);
+
+    // json string
+
+    var json_string = `{
+        "username" : "Andrew Anderson",
+        "age" : 56
+    }`
+    document.write("<br><br>typeof json_string : "+typeof json_string);
+    var obj = JSON.parse(json_string);
+    document.write("<br><br>typeof obj : "+typeof obj);
+    document.write("<br>username : "+obj.username);
+    document.write("<br>age : "+obj.age);
+
+    var object = {
+        username : "Andrew Anderson",
+        age : 56
+    }
+    document.write("<br><br>typeof object : "+typeof JSON.stringify(object));
+
+</script>
