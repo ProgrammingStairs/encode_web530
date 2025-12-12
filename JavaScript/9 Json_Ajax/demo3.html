@@ -1,0 +1,27 @@
+<button onclick="show()">Click to Fetch Data</button>
+<p id="show"></p>
+<script>
+    function show(){
+        var method = "POST";
+        var url = "https://jsonplaceholder.typicode.com/posts";
+        var async_status = true;
+        var obj = {
+            "userId":1222,
+            "id":888,
+            "title":"Its my title",
+            "body":"This is body"
+        }
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.open(method,url,async_status);
+        xhttp.setRequestHeader("content-type","application/json");
+        xhttp.send(JSON.stringify(obj));
+
+        xhttp.onreadystatechange = function(){
+            if(xhttp.readyState==4 && xhttp.status==201){
+                var myData = xhttp.responseText;
+                document.getElementById("show").innerHTML = "Data sent successfully for add : "+myData;
+            }
+        }
+    }
+</script>

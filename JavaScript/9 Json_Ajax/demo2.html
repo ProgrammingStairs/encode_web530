@@ -1,0 +1,33 @@
+<button onclick="show()">Click to Fetch Data</button>
+<p id="show"></p>
+<script>
+    function show(){
+        var method = "GET";
+        var url = "https://jsonplaceholder.typicode.com/posts";
+        var async_status = true;
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.open(method,url,async_status);
+        xhttp.send();
+
+        xhttp.onreadystatechange = function(){
+            if(xhttp.readyState==4 && xhttp.status==200){
+                var arr = JSON.parse(xhttp.responseText);
+                // console.log(arr);
+                var table="<table border='1' cellspacing='0' cellpadding='6'><tr><th>S.No</th><th>UserId</th><th>Id</th><th>Title</th><th>Body</th></tr>";
+                    arr.forEach((element,index) => {
+                        table+=`<tr>
+                                <td>${index+1}</td>
+                                <td>${element.userId}</td>
+                                <td>${element.id}</td>
+                            <td>${element.title}</td>
+                            <td>${element.body}</td>                                
+                        </tr>`;
+                    });
+                table+="</table>"    
+
+                document.getElementById("show").innerHTML = table;
+            }
+        }
+    }
+</script>
