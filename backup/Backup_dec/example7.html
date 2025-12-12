@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend align="center"><fieldset>Fill details</fieldset></legend>
+    <form action="login.html" method="post">
+    <table align="center">
+        <caption><h2>Registration Form</h2></caption>
+        <tr>
+            <td>
+                <label for="username">Username</label>
+            </td>
+            <td>
+                <input 
+                    type="text"
+                    placeholder="Enter Username"
+                    id="username"
+                    name="username"
+                    value="John Deo"
+                    required
+                    readonly
+                >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="email">Email</label>
+            </td>
+            <td>
+                <input 
+                    type="email"
+                    placeholder="Enter Email"
+                    id="email"
+                    name="email"
+                    required
+                >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="password">Password</label>
+            </td>
+            <td>
+                <input 
+                    type="password"
+                    placeholder="Enter Password"
+                    id="password"
+                    name="password"
+                    required
+                >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="date">DOB</label>
+            </td>
+            <td>
+                <input 
+                    type="date"
+                    id="date"
+                    name="date"
+                    required
+                >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="contact">Contact</label>
+            </td>
+            <td>
+                <input 
+                    type="text"
+                    placeholder="Enter 10 Digit Contact No."
+                    id="contact"
+                    name="contact"
+                    required
+                >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="male">Gender</label>
+            </td>
+            <td>
+                <input 
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="male"
+                    required
+                    checked
+                ><label for="male">Male</label>
+                <input 
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                ><label for="female">Female</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="cricket">Hobbies</label>
+            </td>
+            <td>
+                <input 
+                    type="checkbox"
+                    id="cricket"
+                    name="cricket"
+                    value="cricket"
+                ><label for="cricket">Cricket</label>
+                <input 
+                    type="checkbox"
+                    id="football"
+                    name="football"
+                    value="football"
+                    checked
+                ><label for="football">Football</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="subject">Subject</label>
+            </td>
+            <td>
+                <select required id="subject" name="subject">
+                <!-- <select id="subject" name="subject" multiple> -->
+                    <option value="">Select Subject</option>
+                    <option value="C Language">C Language</option>
+                    <option selected value="C++ Language">C++ Language</option>
+                    <option value="C# Language">C# Language</option>
+                    <option value="Java Language">Java Language</option>
+                    <option value=".Net Language">.Net Language</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="address">Address</label></td>
+            <td>
+                <textarea name="address" id="address" placeholder="Enter address"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="file">Upload</label>
+            </td>
+            <td>
+                <input 
+                required
+                    type="file"
+                    id="file"
+                    name="file"
+                    multiple
+                >
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Registration">
+                <input type="reset" value="Reset">
+            </td>
+        </tr>
+
+    </table>
+    </form>
+    </fieldset>
+</body>
+</html>
