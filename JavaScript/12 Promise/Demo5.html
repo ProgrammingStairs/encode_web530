@@ -1,0 +1,25 @@
+<!-- example showing the conccept of promise -->
+
+<script>
+    /*
+    new Promise((resolve,reject)=>{
+        resolve(true);
+        // reject(false);
+    }).then((status)=>{
+        console.log("Status : ",status);
+    }).catch((status)=>{
+        console.log("Status : ",status);
+    });
+    */
+
+    const res = new Promise((resolve,reject)=>{
+        return resolve(true);
+        // return reject(false);
+    });
+    
+    res.then((status)=>{
+        console.log("Status.. : ",status);
+    }).catch((status)=>{
+        console.log("Status.. : ",status);
+    });
+</script>

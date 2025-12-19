@@ -1,0 +1,18 @@
+<!-- example showing the conccept of promise -->
+
+<script>
+    const resolveFun = function(message){
+        console.log("Resolve : ",message);
+    }
+    const rejectFun = function(errMessage){
+        console.log("Reject : ",errMessage);
+        document.write("Reject : ",errMessage);
+    }
+    const executorFun = (resolve,reject)=>{
+        // resolve("success");
+        // reject("error");
+        reject(new Error("error occured"));
+    }
+    
+    new Promise(executorFun).then(resolveFun,rejectFun);
+</script>

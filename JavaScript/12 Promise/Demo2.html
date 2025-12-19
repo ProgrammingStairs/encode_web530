@@ -1,0 +1,14 @@
+<!-- example showing the conccept of promise -->
+
+<script>
+    new Promise((resolve,reject)=>{
+        // resolve("success");
+        // reject("error");
+        reject(new Error("error occured"));
+    }).then(function(message){
+        console.log("Resolve : ",message);
+    },function(errMessage){
+        console.log("Reject : ",errMessage);
+        document.write("Reject : ",errMessage);
+    });
+</script>
