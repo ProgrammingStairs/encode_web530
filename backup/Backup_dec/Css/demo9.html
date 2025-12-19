@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li::first-letter{
+            color:red;
+        }
+        li:first-child{
+            background-color: grey;
+        }
+        ::marker{
+            color:green;
+        }
+        span::after{
+            content: ' ####';
+        }
+        span::before{
+            content: '#### ';
+        }
+        ::placeholder{
+            color:orange;
+        }
+        a:active{
+            color:blue;
+        }
+        input[type="text"]{
+            font-family: cursive;
+        }
+</style>
+</head>
+<body>
+    <a href="">Home</a>
+    <input type="text" placeholder="Enter username">
+    <span>List</span>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+    </ul>
+</body>
+</html>

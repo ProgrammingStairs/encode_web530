@@ -1,0 +1,29 @@
+<!-- Asynchronous + Timer functions (setInterval, setTimeout) -->
+<script>
+    console.log("Before execution");
+    function myFun1(){
+        console.log("<br>statement 1");
+    }
+    function myFun2(){
+        console.log("<br>statement 2");
+    }
+    function myFun3(){
+        console.log("<br>statement 3");
+    }
+   
+        myFun1();
+        var tm = setTimeout(myFun2,0) // zero time delay;
+        // setTimeout(myFun2); // zero time delay
+        var count=1;
+        var timer = setInterval(()=>{
+            if(count<=10){
+                myFun3();
+                count++;
+            }
+            else
+                clearInterval(timer);
+        },1000);
+
+        clearTimeout(tm);
+    console.log("<br>After execution");
+</script>

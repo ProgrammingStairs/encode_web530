@@ -1,0 +1,30 @@
+<!-- Example showing the concept of callback Hell | Pyramid of doom-->
+<script>
+    var a = 23,b = 45;
+    function addition(a,b,callback){
+        console.log("Sum : "+(a+b));
+        callback(false);
+    }
+    function subtraction(a,b,callback){
+        console.log("Sub : "+(a-b));
+        callback(true);
+    }
+    function multiplication(a,b,callback){
+        console.log("Mul : "+(a*b));
+        callback();
+    }
+
+    addition(a,b,(value)=>{
+        if(!value){
+            subtraction(a,b,(value)=>{
+                if(value){
+                    multiplication(a,b,()=>{
+                        console.log("End of program");
+                    })
+                }
+            });
+        }
+    });
+</script>
+
+

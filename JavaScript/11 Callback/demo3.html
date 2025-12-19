@@ -1,0 +1,22 @@
+<!-- Example showing the concept of callback -->
+<!-- synchronous callback -->
+<script>
+
+    var fun1 = ()=>{
+        document.write("<br>Statement 2");
+    };
+    var fun2 = ()=>{
+        document.write("<br>Statement 4");
+    };
+    
+    document.write("Before execution");
+    function myFun(callback1,callback2){
+        document.write("<br>Statement 1");
+            callback1();
+        document.write("<br>Statement 3");      
+            callback2();
+        document.write("<br>Statement 5");      
+    }
+    myFun(fun1,fun2);
+    document.write("<br>After execution");
+</script>

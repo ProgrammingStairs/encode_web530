@@ -1,0 +1,23 @@
+<!-- Example showing the concept of callback Hell | Pyramid of doom-->
+<script>
+    var num=10;
+    function printData(num,callback){
+        console.log("num : "+num);
+        callback(num+2,(num,callback)=>{
+            console.log("num : "+num);
+            callback(num+2,()=>{
+                console.log("End of program");
+            });
+        });
+    } 
+    printData(num,(num,callback)=>{
+        console.log("num : "+num);
+        callback(num+2,(num,callback)=>{
+            console.log("num : "+num);
+            callback();
+        });
+    });
+
+</script>
+
+

@@ -1,0 +1,16 @@
+<!-- Example showing the concept of callback -->
+<script>
+    var a = 100;
+    var b = 234;
+    function printData(a,b,callback){
+        callback(a+b);
+    }
+
+    var myFun = (message)=>{
+        document.write("Result : "+message);
+    }
+
+    printData(a,b,myFun);
+</script>
+
+

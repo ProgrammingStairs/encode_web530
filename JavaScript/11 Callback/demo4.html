@@ -1,0 +1,24 @@
+<!-- Example showing the concept of callback -->
+<!-- Asynchronous callback -->
+<script>
+
+    var fun1 = ()=>{
+        console.log("<br>Statement 2");
+    };
+    var fun2 = ()=>{
+        console.log("<br>Statement 4");
+    };
+    
+    console.log("Before execution");
+    function myFun(callback1,callback2){
+        console.log("<br>Statement 1");
+            setTimeout(callback1,3000);
+        console.log("<br>Statement 3");      
+            setTimeout(()=>{
+                callback2();
+            },2000);
+        console.log("<br>Statement 5");      
+    }
+    myFun(fun1,fun2);
+    console.log("<br>After execution");
+</script>

@@ -1,0 +1,22 @@
+<!-- Asynchronous + Timer functions (setInterval, setTimeout) -->
+<script>
+    console.log("Before execution");
+    function myFun1(){
+        console.log("<br>statement 1");
+    }
+    function myFun2(name,age){
+        console.log("<br>statement 2 : "+name+" , "+age);
+    }
+    function myFun3(){
+        console.log("<br>statement 3");
+    }
+   
+        myFun1();
+        setTimeout(myFun2,0,"Peter Parker",67) // zero time delay;
+        // setTimeout(myFun2); // zero time delay
+        setInterval(()=>{
+            myFun3();
+        },3000);
+
+    console.log("<br>After execution");
+</script>

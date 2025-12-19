@@ -1,0 +1,19 @@
+<!-- Asynchronous + Timer functions (setInterval, setTimeout) -->
+<script>
+    document.write("Before execution");
+    function myFun1(){
+        document.write("<br>statement 1");
+    }
+    function myFun2(){
+        document.write("<br>statement 2");
+    }
+    function myFun3(){
+        document.write("<br>statement 3");
+    }
+   
+        myFun1();
+        setTimeout(myFun2,4000);
+        myFun3();
+
+    document.write("<br>After execution");
+</script>

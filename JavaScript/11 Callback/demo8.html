@@ -1,0 +1,19 @@
+<!-- Example showing the concept of callback -->
+<script>
+    function printData(callback){
+        setTimeout(()=>{
+            var obj = {
+                name : "Andrew Anderson",
+                age : 78,
+                address : "Indore"
+            }
+            callback(obj);
+        },4000);
+    }
+    var myFun = (obj)=>{
+        console.log(`Hello ${obj.name}, your age is ${obj.age} and address is ${obj.address}`);
+    };
+    printData(myFun);
+</script>
+
+

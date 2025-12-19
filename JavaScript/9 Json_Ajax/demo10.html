@@ -1,0 +1,28 @@
+<script>
+
+    // example of  object destructuring
+
+    function myFun(){
+        var obj = {
+            name:"Andrew Anderson",
+            age:98,
+            salary:78999,
+            address:{
+                state:"Madhya Pradesh",
+                city : "Indore",
+                toString(){
+                    return this.city+" , "+this.state;
+                }
+            }
+        }
+        return obj;
+    }
+
+    var {name:Fullname,age,salary,address,pincode=452010} = myFun();
+    document.write("Name : "+Fullname);
+    document.write("<br>Age : "+age);
+    document.write("<br>Salary : "+salary);
+    document.write("<br>State : "+address);
+    document.write("<br>Pincode : "+pincode);
+    
+</script>

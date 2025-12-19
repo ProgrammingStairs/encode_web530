@@ -1,0 +1,15 @@
+<!-- Example showing the concept of callback -->
+<script>
+    function printData(callback){
+        var msg = "Hello Peter Parker";
+        callback(msg);
+    }
+
+    var myFun = (message)=>{
+        document.write("Message : "+message);
+    }
+
+    printData(myFun);
+</script>
+
+

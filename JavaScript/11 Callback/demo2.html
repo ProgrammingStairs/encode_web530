@@ -1,0 +1,14 @@
+<!-- Example showing the concept of callback -->
+<!-- synchronous callback -->
+<script>
+    document.write("Before execution");
+    function myFun(callback){
+        document.write("<br>Statement 1");
+            callback();
+        document.write("<br>Statement 3");      
+    }
+    myFun(()=>{
+        document.write("<br>Statement 2");
+    });
+    document.write("<br>After execution");
+</script>
