@@ -1,0 +1,33 @@
+<!-- example showing the concept of promise -->
+
+<script>
+var num = 10;
+function printData(num){
+    console.log("num : "+num);
+    return new Promise((resolve,reject)=>{
+        resolve(num+2);
+    });
+}    
+printData(num).then((value)=>{
+    printData(value).then((value)=>{
+        printData(value).then((value)=>{
+            printData(value).then((value)=>{
+                printData(value).then((value)=>{
+                    console.log("num : "+value);
+                    console.log("End of program");
+                }).catch((error)=>{
+                    console.log("Error : "+error);
+                });
+            }).catch((error)=>{
+                console.log("Error : "+error);
+            });
+        }).catch((error)=>{
+            console.log("Error : "+error);
+        });
+    }).catch((error)=>{
+    console.log("Error : "+error);
+    });    
+}).catch((error)=>{
+    console.log("Error : "+error);
+});
+</script>

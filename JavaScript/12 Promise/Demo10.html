@@ -1,0 +1,40 @@
+<!-- example showing the concept of promise -->
+
+<script>
+    function gotoroom(){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("gotoroom");
+            },3000);
+        })
+    }
+    function removegarbage(){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("removegarbage");
+            },1000);
+        })
+    }
+    function wonprize(){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("wonprize");
+            },2000);
+        })
+    }
+    gotoroom().then((msg)=>{
+        console.log(msg);
+        removegarbage().then((msg)=>{
+            console.log(msg);
+                wonprize().then((msg)=>{
+                    console.log(msg); 
+                }).catch((msg)=>{
+                    console.log(msg);
+                });
+        }).catch((msg)=>{
+            console.log(msg);
+        });        
+    }).catch((msg)=>{
+        console.log(msg);
+    });
+</script>

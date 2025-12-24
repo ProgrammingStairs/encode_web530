@@ -1,0 +1,28 @@
+<!-- async await -->
+<script>
+    console.log("statement 1");
+    
+    function checkNum(num){
+        return new Promise((resolve,reject)=>{
+            (num%2==0) ? setTimeout(()=>{resolve("Even Number")},4000) : reject("Odd Number");
+        });
+    }
+    console.log("statement 2");
+
+    async function myFun(){
+        try{
+            var num = prompt("Enter Number");
+                console.log("statement 5");
+            var value = await checkNum(num);
+                console.log("statement 6");
+            console.log("Result (resolve) : ",value);
+        }catch(error){
+            console.log("Result (reject) : ",error);
+        }
+    }    
+        console.log("statement 3");
+
+    myFun();
+        console.log("statement 4");
+
+</script>

@@ -1,0 +1,16 @@
+<!-- example showing the concept of promise -->
+<!-- Promise predefined methods -->
+<script>
+    // var obj = Promise.resolve(100);
+    // obj.then((value)=>{
+    //     console.log("Value : "+value);
+    // })
+
+    var obj = Promise.reject(100);
+    obj.then((value)=>{
+        console.log("Value : "+value);
+    }).catch((error)=>{
+        console.log("Error : "+error);
+    });
+
+</script>
