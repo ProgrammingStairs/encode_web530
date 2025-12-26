@@ -1,0 +1,85 @@
+
+<script>
+    // normal function
+    /*
+    var a = 23;
+    var b = 56;
+    var c = 75;
+    function addition(num1,num2,num3){
+        return num1+num2+num3;
+    }
+    console.log("Result : "+addition(a,b,c));
+    */
+
+    // closure 
+    /*
+    var a = 23;
+    var b = 561;
+    var c = 75;
+    function addition(num1){
+        return function add1(b){
+            return function add2(c){
+                return a+b+c;
+            }
+        }
+    }
+    var fun1 = addition(a);
+    var fun2 = fun1(b);
+    var res = fun2(c);
+    console.log("Result : "+res);
+   */
+
+  // currying 
+  /*
+    var a = 23;
+    var b = 561;
+    var c = 75;
+    function addition(num1){
+        return function add1(b){
+            return function add2(c){
+                return a+b+c;
+            }
+        }
+    }
+    console.log("Result : "+addition(a)(b)(c));
+  */
+    /*
+    var a = 23;
+    var b = 561;
+    var c = 75;
+    function addition(num1){
+        var d = 56;
+        return (b)=>{
+            return (c)=>{
+                return a+b+c+d;
+            }
+        }
+    }
+    console.log("Result : "+addition(a)(b)(c));
+ */ 
+ /*
+    var a = 23;
+    var b = 561;
+    var c = 75;
+    var d = 67;
+    function addition(num1){
+        return (b,c)=>{
+            return (d)=>{
+                return a+b+c+d;
+            }
+        }
+    }
+    console.log("Result : "+addition(a)(b,c)(d));
+*/ 
+
+function display(greet){
+    return (name)=>{
+        return (YOB)=>{
+            return greet+" , "+name+" "+" You are "+(new Date().getFullYear()-YOB)+" years old";
+        }
+    }
+}
+
+var YOB = 1998;
+console.log(display("Hello ")("Andrew Anderson ")(YOB));
+</script>

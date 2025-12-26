@@ -1,0 +1,31 @@
+<!--  example showing the concept of currying + closure -->
+
+<script>
+    function operation(operator){
+        return (a)=>{
+            return (b)=>{
+                var res;
+                switch(operator){
+                    case "+" : res = a+b; break;
+                    case "-" : res = a-b; break;
+                    case "*" : res = a*b; break;
+                    case "/" : res = a/b; break;
+                    case "%" : res = a%b; break;
+                    default : res = "Invalid Selection"; break;
+                }
+                return res;
+            }
+        }
+    }
+    var add = operation("+");
+    var sub = operation("-");
+    var mul = operation("*");
+    var div = operation("/");
+    var mod = operation("%");
+    document.write("<br>Addition : "+add(45)(89));
+    document.write("<br>Subtraction : "+sub(45)(89));
+    document.write("<br>Multiplication : "+mul(45)(89));
+    document.write("<br>Division : "+div(45)(89));
+    document.write("<br>Modulus : "+mod(45)(89));
+
+</script>
