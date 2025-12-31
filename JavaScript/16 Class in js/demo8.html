@@ -1,0 +1,19 @@
+<script>
+class Demo{
+    constructor(a,b){
+        this.a = a;
+        this.b = b;
+        console.log("Value of a : ",this.a);
+        console.log("Value of b : ",this.b);
+    }
+    display(){
+        console.log("Value of a : ",this.a);
+        console.log("Value of b : ",this.b);
+    }
+}
+var a = parseInt(prompt("Enter value of a : "));
+var b = parseInt(prompt("Enter value of b : "));
+const obj = new Demo(a,b);
+obj.display();
+</script>
+

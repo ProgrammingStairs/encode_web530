@@ -1,0 +1,19 @@
+<script>
+
+class Demo{
+    a = 100; 
+    show(){
+        console.log("value of a : ",this.a);
+    }
+}
+const obj1 = new Demo();
+console.log("value of obj1 a : ",obj1.a);
+obj1.a = 300;
+console.log("value of obj1 a : ",obj1.a);
+obj1.show();
+
+const obj2 = new Demo();
+console.log("value of obj2 a : ",obj2.a);
+obj2.show();
+</script>
+

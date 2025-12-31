@@ -1,0 +1,17 @@
+<script>
+    class Demo{
+        static name = "Peter parker";
+        age = 56;
+        static ageNew = 89;
+        static show(){
+            console.log("Name : "+Demo.name+" Age : "+Demo.ageNew);
+        }
+        display(){
+            console.log("Name : "+Demo.name+" Age : "+this.age);
+        }
+    }
+    const obj = new Demo();
+    Demo.show();
+    obj.display();
+</script>
+

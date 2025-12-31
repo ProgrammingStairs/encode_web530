@@ -1,0 +1,18 @@
+<script>
+    class Parent{
+        constructor(){
+            console.log("Parent class constructor called");            
+        }
+    }
+    class Child extends Parent{
+        a=100;
+        constructor(){
+            super();
+            console.log("Child class constructor called");            
+        }
+    }
+    const obj = new Child();
+    console.log("value of a : ",obj.a);
+    
+</script>
+

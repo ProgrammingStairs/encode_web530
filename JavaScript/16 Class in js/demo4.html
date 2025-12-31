@@ -1,0 +1,50 @@
+<script>
+   
+    class Demo{
+        setData(a,b){
+            this.a = a;
+            this.b = b;
+        }
+        display(){
+            document.write("<br>a : "+this.a);
+            document.write("<br>b : "+this.b);
+        }
+        swap(){
+            var temp = this.a;
+            this.a = this.b;
+            this.b = temp;
+        }
+    }
+    var a = 123,b=45;
+    const obj = new Demo();
+    obj.setData(a,b);
+    document.write("<br>Before Swapping : ");
+    obj.display();
+        obj.swap();
+    document.write("<br>After Swapping : ");
+    obj.display();
+    
+</script>
+
+<!-- 
+    console.log(a); // output : undefined
+    var a = 100;
+
+    Hoisting 
+
+    var a; // declaration
+    a = undefined; // initialization 
+    console.log(a); // output : undefined
+    a = 100;
+--------------------------------------------------
+
+    console.log(a); // output : reference error
+    let a = 100;
+
+    Hoisting 
+
+    let a; // declaration
+    console.log(a); // output : reference error
+    a = 100;
+
+-->

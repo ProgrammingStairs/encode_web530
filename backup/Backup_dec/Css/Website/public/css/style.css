@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"width" 100;
+  margin:0;
+}
+#container{
+    width: 95%;
+    height:auto;
+    /* background-color: grey; */
+    margin:auto;
+}
+#header{
+    height: 50px;
+    background-color: white;
+    padding: 5px;
+    position: sticky;
+    top:0;
+   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Bottom shadow */
+}
+#logoSec{
+    width: 10%;
+    /* background-color: red; */
+    float: left;
+    height: 100%;
+}
+#headingSec{
+    width: 20%;
+    /* background-color: green; */
+    float: left;
+    height: 100%;
+}
+#heading{
+    margin-top:1px;
+    color: #234567;
+    font-weight: 500;
+}
+#nav{
+    width: 70%;
+    /* background-color: purple; */
+    float: left;
+    height: 100%;
+}
+#logo{
+    height:100%;
+    margin-left: 35px;
+}
+#nav ul{
+    list-style: none;
+    padding-top: 8px;
+}
+#nav ul li{
+    display: inline;
+}
+#nav ul li a{
+    color:#234567;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 28px;
+}
+#nav ul li a:hover{
+    color:crimson;
+}
+#nav ul li ul{
+    display: none;
+}
+#nav ul li:hover ul{
+    display: block;
+    position: absolute;
+    background-color: white;
+    width:120px;
+    margin-left: 190px;
+}
+#nav ul li ul li{
+    margin-left: -30px;
+}
+#banner{
+    height: 400px;
+    background-color: red;
+}
+#bannerImg{
+    height: 400px;
+    width: 100%;
+}
+#content{
+    height: 200px;
+    /* background-color: red; */
+    padding: 30px;
+    text-align: justify;
+}
+#content h2,#rightSection h2{
+    color:#234567;
+    font-weight: 500;
+}
+#section{
+    height: 500px;
+    background-color: whitesmoke;
+    padding: 30px;
+}
+#leftSection{
+    width: 400px;
+    /* background-color: blue; */
+    height: 95%;
+    float: left;
+    margin: 20px;
+}
+#sectionImg{
+    width: 400px;
+    height: 100%;
+}
+#rightSection{
+    width: 650px;
+    /* background-color: blue; */
+    height: 95%;
+    float: left;
+    margin: 20px;
+}
+#rightSection p{
+    font-size: 17px;
+    text-align: justify;
+}

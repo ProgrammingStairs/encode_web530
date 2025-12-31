@@ -1,0 +1,21 @@
+<script>
+    var str = "This is an example of JavaScript";
+    document.write("<br>charAt(3) : "+str.charAt(3));
+    document.write("<br>charCodeAt(3) : "+str.charCodeAt(3));
+    document.write("<br>indexOf(e) : "+str.indexOf('e'));
+    document.write("<br>lastIndexOf(e) : "+str.lastIndexOf('e'));
+    document.write("<br>includes : "+str.includes("JavaScript"));
+    document.write("<br>includes : "+str.includes("javascript"));
+
+    var res;
+    res = str.match("JavaScript") ? "Content Matched" : "Not matched";
+    document.write("<br>match : "+res);
+    res = str.match("javascript") ? "Content Matched" : "Not matched";
+    document.write("<br>match : "+res);
+    
+    document.write("<br>replace : "+str.replace("JavaScript","JS"));
+    document.write("<br>replace : "+str.replace("javascript","JS"));
+
+    document.write("<br>replaceAll : "+str.replaceAll("a","A"));
+
+</script>

@@ -1,0 +1,16 @@
+<script>
+
+    class Demo{
+        #a = 100;
+        #printData(){
+            console.log("value of a: ",this.#a);
+        }
+        print(){
+            this.#printData();
+        }
+    }
+    const obj = new Demo();
+    console.log("value of a : ",obj.a);
+    obj.print();
+</script>
+

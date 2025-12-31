@@ -1,0 +1,38 @@
+<script>
+    class Demo{
+        welcomeMessage(){
+            document.write("<h2>Welcome to Arithmetic Operations</h2>");
+        }
+        setData(a,b){
+            this.a = a;
+            this.b = b;
+        }
+        add(){
+            this.welcomeMessage();
+            document.write("Add : "+(this.a+this.b));
+        }
+        sub(){
+            document.write("<br>Sub : "+(this.a-this.b));
+        }
+        mul(){
+            document.write("<br>Mul : "+(this.a*this.b));
+        }
+        div(){
+            document.write("<br>Div : "+(this.a/this.b));
+        }
+        mod(){
+            document.write("<br>Mod : "+(this.a%this.b));
+        }
+    }
+    var a = 123,b=45;
+    const obj = new Demo();
+    obj.setData(a,b);
+    obj.add();
+    obj.sub();
+    obj.mul();
+    obj.div();
+    obj.mod();
+    document.write("<br>a : "+obj.a);
+    document.write("<br>b : "+obj.b);
+    
+</script>

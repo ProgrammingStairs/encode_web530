@@ -1,0 +1,29 @@
+<script>
+
+    class Demo{
+        #length;
+        #breadth;
+        #printData(){
+            console.log("Length : ",this.#length);
+            console.log("Breadth : ",this.#breadth);
+        }
+        #perimeter(){
+            console.log("Perimeter : ",2*(this.#length+this.#breadth));
+        }
+        #area(){
+            console.log("Area : ",this.#length*this.#breadth);
+        }
+        print(l,b){
+            this.#length = l;
+            this.#breadth = b;
+            this.#printData();
+            this.#perimeter();
+            this.#area();
+        }
+    }
+    var l = parseInt(prompt("Enter length : "));
+    var b = parseInt(prompt("Enter breadyh : "));
+    const obj = new Demo();
+    obj.print(l,b);
+</script>
+
