@@ -92,7 +92,7 @@
     padding: 30px;
     text-align: justify;
 }
-#content h2,#rightSection h2{
+#content h2,#rightSection h2,#about h2,#contact h2,#contact1 h3,#contact3 h3 ,#contact h4,#footer h3{
     color:#234567;
     font-weight: 500;
 }
@@ -122,4 +122,73 @@
 #rightSection p{
     font-size: 17px;
     text-align: justify;
+}
+#about{
+    height:450px;
+    padding:30px;
+    /* background-color: grey; */
+}
+#leftAbout{
+    width: 300px;
+    height: 300px;
+    /* background-color: blue; */
+    float: left;
+    border-radius: 50%;
+    margin: 20px;
+}
+#aboutImg{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+#rightAbout{
+    width: 750px;
+    /* background-color: blue; */
+    height: 95%;
+    float: left;
+    margin: 20px;
+}
+#rightAbout p{
+    font-size: 17px;
+    text-align: justify;
+}
+#contact{
+    height: 450px;
+    padding: 30px;
+    background-color: whitesmoke;
+}
+#contact1{
+    height : 320px;
+    padding: 20px;
+    width: 145px;
+    /* background-color: red; */
+    float: left;
+    margin: 10px;
+}
+#contact3{
+    height : 320px;
+    padding: 20px;
+    width: 290px;
+    /* background-color: red; */
+    float: left;
+    margin: 10px;
+}
+#contact2{
+    height : 360px;
+    width: 330px;
+    /* background-color: red; */
+    float: left;
+    margin: 10px;
+}
+iframe{
+    height : 360px;
+    width: 330px;
+}
+#contact1 ul li a{
+    text-decoration: none;
+    line-height: 30px;
+    color:black;
+}
+#footer{
+    padding: 10px;
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <div id="demo1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae natus obcaecati ratione inventore similique non accusamus eius explicabo dolorem earum, nobis laborum nostrum adipisci qui, illo id praesentium quisquam necessitatibus?</p>
+        </div>
+        <div id="demo2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui est nihil reiciendis cupiditate quae. Laudantium assumenda doloribus officia. Dolorum vero unde animi culpa voluptas repellat doloremque itaque dignissimos voluptatibus consectetur.</p>
+        </div>
+    </div>
+    <button onclick="myFun()">Click</button>
+    <script>
+        function myFun(){
+            var main = document.getElementById("main");  
+            var demo2 = document.getElementById("demo2");  
+
+            main.removeChild(demo2);
+
+            var para = document.createElement("p");
+            var txt = document.createTextNode("This si an example of dom and bom");
+            
+            para.appendChild(txt);
+            main.appendChild(para);
+        }
+    </script>
+</body>
+</html>

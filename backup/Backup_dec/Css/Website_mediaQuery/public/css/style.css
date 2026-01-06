@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"width" 100;
+  margin:0;
+}
+#container{
+    width: 95%;
+    height:auto;
+    /* background-color: grey; */
+    margin:auto;
+}
+#header{
+    height: 50px;
+    background-color: white;
+    padding: 5px;
+    position: sticky;
+    top:0;
+   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Bottom shadow */
+}
+#logoSec{
+    width: 10%;
+    /* background-color: red; */
+    float: left;
+    height: 100%;
+}
+#headingSec{
+    width: 20%;
+    /* background-color: green; */
+    float: left;
+    height: 100%;
+}
+#heading{
+    margin-top:1px;
+    color: #234567;
+    font-weight: 500;
+}
+#nav{
+    width: 70%;
+    /* background-color: purple; */
+    float: left;
+    height: 100%;
+}
+#logo{
+    height:100%;
+    margin-left: 35px;
+}
+#nav ul{
+    list-style: none;
+    padding-top: 8px;
+}
+#nav ul li{
+    display: inline;
+}
+#nav ul li a{
+    color:#234567;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 28px;
+}
+#nav ul li a:hover{
+    color:crimson;
+}
+#nav ul li ul{
+    display: none;
+}
+#nav ul li:hover ul{
+    display: block;
+    position: absolute;
+    background-color: white;
+    width:120px;
+    margin-left: 190px;
+}
+#nav ul li ul li{
+    margin-left: -30px;
+}
+#banner{
+    height: 400px;
+    /* background-color: red; */
+}
+#bannerImg{
+    height: 400px;
+    width: 100%;
+}
+#content{
+    height: 200px;
+    /* background-color: red; */
+    padding: 30px;
+    text-align: justify;
+}
+#content h2,#rightSection h2,#about h2,#contact h2,#contact1 h3,#contact3 h3 ,#contact h4,#footer h3{
+    color:#234567;
+    font-weight: 500;
+}
+#section{
+    height: 500px;
+    background-color: whitesmoke;
+    padding: 30px;
+}
+#leftSection{
+    width: 400px;
+    /* background-color: blue; */
+    height: 95%;
+    float: left;
+    margin: 20px;
+}
+#sectionImg{
+    width: 400px;
+    height: 100%;
+}
+#rightSection{
+    width: 650px;
+    /* background-color: blue; */
+    height: 95%;
+    float: left;
+    margin: 20px;
+}
+#rightSection p{
+    font-size: 17px;
+    text-align: justify;
+}
+#about{
+    height:450px;
+    padding:30px;
+    /* background-color: grey; */
+}
+#leftAbout{
+    width: 300px;
+    height: 300px;
+    /* background-color: blue; */
+    float: left;
+    border-radius: 50%;
+    margin: 20px;
+}
+#aboutImg{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+#rightAbout{
+    width: 750px;
+    /* background-color: blue; */
+    height: 95%;
+    float: left;
+    margin: 20px;
+}
+#rightAbout p{
+    font-size: 17px;
+    text-align: justify;
+}
+#contact{
+    height: 450px;
+    padding: 30px;
+    background-color: whitesmoke;
+}
+#contact1{
+    height : 320px;
+    padding: 20px;
+    width: 145px;
+    /* background-color: red; */
+    float: left;
+    margin: 10px;
+}
+#contact3{
+    height : 320px;
+    padding: 20px;
+    width: 290px;
+    /* background-color: red; */
+    float: left;
+    margin: 10px;
+}
+#contact2{
+    height : 360px;
+    width: 330px;
+    /* background-color: red; */
+    float: left;
+    margin: 10px;
+}
+iframe{
+    height : 360px;
+    width: 330px;
+}
+#contact1 ul li a{
+    text-decoration: none;
+    line-height: 30px;
+    color:black;
+}
+#footer{
+    padding: 10px;
+}
+#humber{
+    height: 24px;
+    display:none;
+}
+#hum{
+    display: none;
+}
+/* ######################################################## */
+/* ######################################################## */
+/* ##################### Media Query ###################### */
+/* ######################################################## */
+/* ######################################################## */
+
+
+@media screen and (max-width:400px){
+    #header{
+    height: 40px;
+    /* background-color: purple; */
+    position: sticky;
+    top:0;
+   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Bottom shadow */
+}
+#logoSec{
+    width: 12%;
+    /* background-color: red; */
+    float: left;
+    height: 100%;
+}
+#headingSec{
+    width: 20%;
+    /* background-color: green; */
+    float: left;
+    height: 100%;
+}
+#heading{
+    font-size: 22px;
+    margin-top:3px;
+    color: #234567;
+    font-weight: 500;
+}
+#nav{
+    width: 68%;
+    /* background-color: orange; */
+    float: left;
+    height: 100%;
+}
+#logo{
+    height:100%;
+    margin-left: 3px;
+}
+#nav ul{
+    list-style: none;
+    padding-top: 8px;
+    background-color: whitesmoke;
+    /* for implementing humberger icon */
+    display: none; 
+}
+#humber{
+    display: block;
+    margin-left: 200px;
+    margin-top: 8px;
+}
+#hum{
+    display: none;
+}
+#hum:checked ~ul{
+    display: block;
+}
+#nav ul li{
+    display: block;
+}
+#nav ul li a{
+    color:#234567;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 28px;
+}
+#nav ul li a:hover{
+    color:crimson;
+}
+#nav ul li ul{
+    display: none;
+}
+#nav ul li:hover ul{
+    display: block;
+    position: absolute;
+    background-color: white;
+    width:120px;
+    margin-left: 190px;
+}
+#nav ul li ul li{
+    margin-left: -30px;
+}
+#banner{
+    height: 220px;
+    /* background-color: red; */
+}
+#bannerImg{
+    height: 220px;
+    width: 100%;
+}
+#content{
+    height: 400px;
+    /* background-color: red; */
+    padding: 30px;
+    text-align: justify;
+    font-size: 14px;
+}
+#content h2,#rightSection h2,#about h2,#contact h2,#contact1 h3,#contact3 h3 ,#contact h4,#footer h3{
+    color:#234567;
+    font-weight: 500;
+    font-size: 20px;
+}
+#section{
+    height: 975px;
+    /* background-color: orange; */
+    padding: 10px;
+}
+#leftSection{
+    width: 320px;
+    /* background-color: blue; */
+    height: 250px;
+    float: left;
+}
+#sectionImg{
+    width: 320px;
+    height: 250px;
+}
+#rightSection{
+    width: 88%;
+    /* background-color: blue; */
+    height: auto;
+    float: left;
+    margin: 20px;
+}
+#rightSection p{
+    font-size: 15px;
+    text-align: justify;
+}
+#about{
+    height:700px;
+    padding:30px;
+    /* background-color: grey; */
+}
+#leftAbout{
+    width: 280px;
+    height: 280px;
+    /* background-color: blue; */
+    float: left;
+    border-radius: 50%;
+    margin: 20px;
+}
+#aboutImg{
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+}
+#rightAbout{
+    width: 90%;
+    /* background-color: blue; */
+    height: 95%;
+    float: left;
+    margin: 20px;
+}
+#rightAbout p{
+    font-size: 17px;
+    text-align: justify;
+}
+#contact{
+    height: 1050px;
+    float: left;
+    padding: 30px;
+    background-color: whitesmoke;
+}
+#contact1{
+    height : 320px;
+    padding: 2px;
+    width: 145px;
+    /* background-color: red; */
+    margin: 1px;
+    
+}
+#contact3{
+    height : 360px;
+    padding: 2px;
+    width: 290px;
+    /* background-color: red; */
+    margin: 1px;
+}
+#contact2{
+    height : 260px;
+    width: 310px;
+    /* background-color: red; */
+    float: left;
+    margin: 5px;
+}
+iframe{
+    height : 260px;
+    width: 310px;
+}
+#contact1 ul li a{
+    text-decoration: none;
+    line-height: 30px;
+    color:black;
+}
+#footer{
+    padding: 20px;
+}
+#footer h3{
+        font-size: 15px;
+}
+}

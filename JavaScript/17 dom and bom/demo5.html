@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo1{
+            background-color: crimson;
+            color:white;
+        }
+        .demoClass{
+            font-family: cursive;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo" class="demoClass">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero architecto cum nulla expedita, autem fuga repellendus eaque quasi consequuntur minima?
+    </div>
+    <script>
+        var element = document.getElementById("demo");
+        element.classList.remove("demoClass");
+        element.classList.add("demo1");
+    </script>
+</body>
+</html>

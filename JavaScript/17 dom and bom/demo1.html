@@ -1,0 +1,25 @@
+<script>
+    // var height = window.innerHeight;
+    // var width = window.innerWidth;
+    // alert("Height : "+height+"\nWidth : "+width);
+
+    // var sHeight = window.screen.height;
+    // var sWidth = window.screen.width;
+    // alert("Height : "+sHeight+"\nWidth : "+sWidth);
+
+document.write("<br>innerHeight : "+innerHeight);
+
+document.write("<br>href : "+window.location.href);
+document.write("<br>host : "+window.location.host);
+document.write("<br>hostname : "+window.location.hostname);
+document.write("<br>protocol : "+window.location.protocol);
+document.write("<br>pathname : "+window.location.pathname);
+document.write("<br>port : "+window.location.port);
+document.write("<br>navigator : "+window.navigator.onLine);
+
+function redirect(){
+    window.location.href = "http://www.google.com";
+}
+</script>
+
+<button onclick="redirect()">Click</button>
