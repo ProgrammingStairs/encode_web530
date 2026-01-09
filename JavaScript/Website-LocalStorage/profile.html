@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+    <blockquote>
+        <h2>Example of LocalStorage</h2>
+        <div id="nav">
+            <ul>
+                <li><a href="profile.html">Home</a></li>
+                <li><a href="viewList.html">ViewList</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">ChangePassword</a></li>
+                <li><a href="">Logout</a></li>
+            </ul>
+        </div>
+        <h2>Welcome <span id="loggedInEmail"></span> </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, eum, corporis nihil quaerat quibusdam molestiae adipisci tenetur asperiores numquam harum dignissimos sunt doloremque, incidunt dolores ad dolorem recusandae quisquam nesciunt iusto fugiat error a nostrum repellat! Dolorum rerum quo ullam consectetur, debitis molestiae suscipit in ratione placeat ea? Cumque tempore modi quibusdam adipisci eius molestias reiciendis aut ipsum veritatis magnam eos exercitationem, dolorum repellendus porro iusto, quisquam quos quia dolor perferendis aliquid, magni voluptatibus placeat. Accusantium, expedita ea incidunt modi laborum deserunt accusamus porro nemo impedit cumque architecto molestias deleniti, totam rerum, veniam quis commodi? Enim consequuntur reiciendis veniam ipsum?</p>
+    </blockquote>
+    <script>
+        var email = sessionStorage.getItem("loggedInEmail");
+        document.getElementById("loggedInEmail").innerHTML = email;
+    </script>
+</body>
+</html>

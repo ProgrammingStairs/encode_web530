@@ -27,3 +27,24 @@ function handleSubmit(){
          alert("Data Added Successfully");
     }
 }
+
+function checkLogin(){
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    
+    var data = JSON.parse(localStorage.getItem("data"));
+    var result = data.find((obj)=>{
+        return obj.email==email && obj.password==password;
+    });
+
+    if(result){
+        sessionStorage.setItem("loggedInEmail",email);
+        alert("Login Successfull");
+        return true;
+    }else{
+        alert("Credentials Not Matched");
+        window.location.reload();
+        return false;
+    }
+}
+

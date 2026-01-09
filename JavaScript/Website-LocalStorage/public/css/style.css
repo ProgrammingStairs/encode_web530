@@ -34,3 +34,19 @@ height:35px;
     background-color: black;
     border-width: 0;
 }
+#up{
+    height:30px;
+    width:auto;
+    padding:5px;
+    border-width: 0px;
+    background-color: green;
+    color:white;
+}
+#del{
+    height:30px;
+    width:auto;
+    padding:5px;
+    border-width: 0px;
+    color:white;
+    background-color: red;
+}

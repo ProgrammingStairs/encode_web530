@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <script src="public/js/myscript.js"></script>
+</head>
+
+<body>
+    <blockquote>
+        <h2>Example of LocalStorage</h2>
+        <div id="nav">
+            <ul>
+                <li><a href="profile.html">Home</a></li>
+                <li><a href="viewList.html">ViewList</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">ChangePassword</a></li>
+                <li><a href="">Logout</a></li>
+            </ul>
+        </div>
+        <h2>Welcome <span id="loggedInEmail"></span> </h2>
+        <p id="showData"></p>
+    </blockquote>
+    <script>
+        var email = sessionStorage.getItem("loggedInEmail");
+        document.getElementById("loggedInEmail").innerHTML = email;
+
+        var arr = JSON.parse(localStorage.getItem("data"));
+        var table = `<h2>Users List</h2><table border="1" cellspacing="0" cellpadding="8">
+            <tr>
+               <th>S.No</th>
+               <th>Username</th>
+               <th>Email</th>
+               <th>Password</th>
+               <th>Address</th> 
+               <th colspan='2'>Action</th>
+            </tr>`
+        for (var i = 0; i < arr.length; i++) {
+            table += `<tr>
+                    <td>${i + 1}</td>
+                    <td>${arr[i].username}</td>
+                    <td>${arr[i].email}</td>
+                    <td>${arr[i].password}</td>
+                    <td>${arr[i].address}</td>
+                    <td><button id="up" onclick=update(${i})>Update</button></td>
+                    <td><button id="del" onclick=''>Delete</button></td>
+                </tr>`
+        }
+        table += `</table>`;
+        document.getElementById("showData").innerHTML = table;
+
+        function update(index) {
+            //alert("Index : "+index);
+            var obj = JSON.parse(localStorage.getItem("data"))[index];
+            console.log(obj);
+            
+            var data = `<h2>Update Form</h2>
+        <form action="viewList.html" onSubmit="return handleSubmitNew(${index})">
+            <input 
+                type="text"
+                placeholder="Enter Username"
+                name="username"
+                id="username"
+                value="${obj.username}"
+                required
+            > <br>
+            <input 
+                type="email"
+                placeholder="Enter Email"
+                name="email"
+                id="email"
+                value="${obj.email}"
+                required
+            > <br>
+            <input 
+                type="password"
+                placeholder="Enter Password"
+                name="password"
+                id="password"
+                value="${obj.password}"
+                required
+            > <br>
+            <input 
+                type="text"
+                placeholder="Enter Address"
+                name="address"
+                id="address"
+                value="${obj.address}"
+                required
+            > <br>
+            <input 
+                type="submit"
+                value="Update"
+            ><br>
+            <input 
+                type="reset"
+                value="Reset"
+            >
+             <br>            
+        </form>`
+        document.getElementById("showData").innerHTML = data;
+        }
+
+        function handleSubmitNew(index){
+            // alert(index+" typeof "+typeof index);
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var address = document.getElementById("address").value;
+            
+            console.log("Username : "+username);
+            console.log("email : "+email);
+            console.log("password : "+password);
+            console.log("address : "+address);
+            
+            var obj = {username,email,password,address};
+            console.log("obj : ",obj);
+            
+            var arr = JSON.parse(localStorage.getItem("data"));
+            console.log("Received Data : ",arr);
+            
+             arr.splice(index,1,obj);
+            // console.log("Updated Data : ",arr);
+
+            var modifiedData = [...arr];
+
+            localStorage.setItem("data",JSON.stringify(modifiedData));
+            
+            return true;
+
+            // localStorage.setItem(JSON.stringify([...arr.splice(index,1,obj)]));
+            // alert("Data Updated Successfully");
+        }
+
+    </script>
+</body>
+
+</html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="public/css/style.css">
+    <script src="public/js/myscript.js"></script>
 </head>
 <body>
     <blockquote>
@@ -18,18 +19,20 @@
             </ul>
         </div>
         <h2>Login Form</h2>
-        <form action="">
+        <form action="profile.html" onsubmit="return checkLogin()">
             <input 
                 type="email"
                 placeholder="Enter Email"
                 name="email"
                 id="email"
+                required
             > <br>
             <input 
                 type="password"
                 placeholder="Enter Password"
                 name="password"
                 id="password"
+                required
             > <br>
             <input 
                 type="submit"
