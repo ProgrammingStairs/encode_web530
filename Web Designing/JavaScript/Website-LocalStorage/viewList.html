@@ -7,19 +7,32 @@
     <title>Document</title>
     <link rel="stylesheet" href="public/css/style.css">
     <script src="public/js/myscript.js"></script>
+    <script>
+        (()=>{
+            window.history.forward();
+        })();
+    </script>
 </head>
 
 <body>
     <blockquote>
         <h2>Example of LocalStorage</h2>
         <div id="nav">
-            <ul>
+            <div style="float: left;">
+           <ul>
                 <li><a href="profile.html">Home</a></li>
                 <li><a href="viewList.html">ViewList</a></li>
                 <li><a href="">Profile</a></li>
                 <li><a href="">ChangePassword</a></li>
-                <li><a href="">Logout</a></li>
             </ul>
+ 
+            </div>
+            <div style="float:left">
+                <form  action="index.html" onsubmit="return logout()">
+                        <button id="btn">Logout</button>
+                </form>
+            </div>
+             
         </div>
         <h2>Welcome <span id="loggedInEmail"></span> </h2>
         <p id="showData"></p>
@@ -46,7 +59,7 @@
                     <td>${arr[i].password}</td>
                     <td>${arr[i].address}</td>
                     <td><button id="up" onclick=update(${i})>Update</button></td>
-                    <td><button id="del" onclick=''>Delete</button></td>
+                    <td><button id="del" onclick=deleteEntry(${i})>Delete</button></td>
                 </tr>`
         }
         table += `</table>`;
@@ -135,6 +148,19 @@
             // alert("Data Updated Successfully");
         }
 
+        function deleteEntry(index){
+            var arr = JSON.parse(localStorage.getItem("data"));
+            arr.splice(index,1);
+            var resultantArray = [...arr];
+            localStorage.setItem("data",JSON.stringify(resultantArray));
+            alert("Data Deleted Successfully");
+            window.location.reload();
+        }
+
+        function logout(){
+            sessionStorage.removeItem("loggedInEmail");
+            return true;
+        }
     </script>
 </body>
 
