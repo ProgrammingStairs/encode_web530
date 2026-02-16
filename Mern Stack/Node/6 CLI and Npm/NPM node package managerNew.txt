@@ -159,9 +159,9 @@ what is package.json and why it is needed?
 ------------------------------------------------------------------------
 (It is a node application configuration file, which stores all dependencies(list of modules) which is required to run an nodejs
 application.
-Some Important Points to Rember : 
+Some Important Points to Remember : 
 --> package.json as the extension itself indicates  that the package.json is in JSON Format.
---> Defaulr Configuration File.
+--> Default Configuration File.
 --> We can also write directly but we can create it by commands.
 --> We can restore dependencies from package.json if node_module may deleted.
 )
@@ -214,8 +214,8 @@ name: The name of the application/project.
 
 version: The version of application. The version should follow semantic versioning rules.
 [Example ] 4.7.6 here 4 means major version(Major changes breaks the api)
-                                 here 7 means minor version(Minor changes does not break the api)
-                                 here 6 means patches(Bug Fixes)
+here 7 means minor version(Minor changes does not break the api)
+here 6 means patches(Bug Fixes)
 
 [NOTE]“express”:”^4.1.1″. in package.json file. The caret symbol (^) is used to tell the npm to find a version greater 
 than 4.1.1 and install it.
@@ -250,6 +250,8 @@ Note: Here, “body-parser”, “express”, “express-validator”, “mongoo
             installed using npm (Node Package Manager).
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+########### Need to start from here ###############
 
 Creating a Node Project:
 ----------------------------------------
