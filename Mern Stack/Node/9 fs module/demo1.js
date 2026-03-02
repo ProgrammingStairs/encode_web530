@@ -1,0 +1,15 @@
+// example showing the concept of fs module
+
+var fs = require('fs');
+var filename = "newFile.txt";
+
+console.log("Before");
+
+fs.open(filename,'w',(error)=>{
+    if(error)
+        console.log("Error : ",error);
+    else 
+        console.log("File created successfully");
+});
+
+console.log("After");
