@@ -1,0 +1,63 @@
+Command line client : 
+Enter password : root (enter)
+
+mysql> 
+
+Command Prompt : 
+C://program files// MySQL // MySQL server // bin 
+on path we need to write cmd and hit enter
+
+command prompt opens with 
+C://program files// MySQL // MySQL server // bin > MySQL -uroot -p enter
+> Enter password : root (enter)
+
+mysql> 
+
+Commands : 
+1. show databases;
+2. create database mysql530;
+3. create database if not exists mysql530;
+4. use mysql530;
+5. show tables;
+6. create database if not exists mysql5301;
+7. drop database mysql5301;
+8. use mysql530;
+   create table user(uid int not null,name varchar(45) not null,address varchar(45), percentage double default 0);
+   show tables;
+9. desc user;
+10. show columns from user; 
+11. create table usernew(uid int not null,name varchar(45) not null,address varchar(45), percentage double default 0);
+
+create table if not exists usernew(uid int not null,name varchar(45) not null,address varchar(45), percentage double default 0);
+
+12. drop table usernew;
+    drop database mysql530;
+
+13. create database if not exists mysql530;
+    use mysql530;
+    create table if not exists user(uid int not null,name varchar(45) not null,address varchar(45), percentage double default 0);
+    desc user;
+    alter table user add status varchar(45);
+    alter table user add status1 varchar(45) not null;
+    alter table user add status2 varchar(45) after address;
+    alter table user modify status2 varchar(100);
+    alter table user drop column status2;
+    alter table user rename column status1 to status_new;
+    alter table user rename user_new;
+    desc user_new;
+    alter table user_new add column user_id int not null first;
+    
+14. create table if not exists user(uid int not null,name varchar(45) not null,address varchar(45), percentage double default 0);
+
+insert into user(uid,name,address,percentage) values(101,'Andrew Anderson',"Indore, Madhya Pradesh",56.56);
+
+select * from user;
+
+insert into user values(102,'Peter parker',"Indore, Madhya Pradesh",98);
+
+// this command not works
+insert into user values(103,'Jack Jackson',"Indore, Madhya Pradesh");
+
+insert into user(uid,name,address) values(103,'Jack Jackson',"Indore, Madhya Pradesh");
+
+insert into user(uid,name) values(103,"jackky");
