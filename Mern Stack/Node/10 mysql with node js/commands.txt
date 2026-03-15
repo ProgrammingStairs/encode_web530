@@ -61,3 +61,57 @@ insert into user values(103,'Jack Jackson',"Indore, Madhya Pradesh");
 insert into user(uid,name,address) values(103,'Jack Jackson',"Indore, Madhya Pradesh");
 
 insert into user(uid,name) values(103,"jackky");
+
+15. create table citizen(cid int primary key auto_increment,fname varchar(45) not null, lname varchar(45) not null, age int not null, country varchar(45) not null);
+
+16. insert into citizen(fname,lname,age,country) values ("Andrew","Anderson",56,"USA");
+    select * from citizen;
+
+17. insert into citizen(fname,lname,age,country) values ("Peter","Parker",32,"USA"),("Mathew","Math",32,"USA"),("Jack","Jackson",59,"DUBAI"),("Simon","Sim",26,"INDIA");
+
+18. select cid,fname,lname,age,country from citizen;
+select cid from citizen;
+select cid,fname from citizen;
+select cid,fname,lname from citizen;
+select cid,fname,lname,age from citizen;
+select cid,country from citizen;
+
+19. select * from citizen where cid=3;
+select * from citizen where country='usa';
+
+20. update citizen set fname='Andrew andy' where fname='andrew';
+update citizen set fname='Andrew' where cid=1;
+update citizen set age=50 where country='USA';
+update citizen set age=18;
+
+21. delete from citizen where cid=3; 
+    delete from citizen;
+
+    insert into citizen(fname,lname,age,country) values ("Peter","Parker",32,"USA"),("Mathew","Math",32,"USA"),("Jack","Jackson",59,"DUBAI"),("Simon","Sim",26,"INDIA");
+
+    truncate table citizen;    
+
+22. select cid as 'S.NO',fname as 'First Name',lname as 'Last Name',age as Age,country as Country from citizen;
+
+select cid as 'S.NO',concat(fname,' ',lname) as 'Full Name',age as Age,country as Country from citizen;
+
+23. select Distinct country from citizen;
+select Distinct country,fname from citizen;
+select count(Distinct country) from citizen;
+select count(Distinct country) as 'Unique Countries' from citizen;
+
+24. select * from citizen where cid=1 and country='India';
+select * from citizen where cid=1 or country='India';
+select * from citizen where cid=4 and country='India';
+select * from citizen where not cid=1;
+select * from citizen where not cid=1 and not country='usa';
+select * from citizen where not cid=1 or not country='usa';
+
+25. select * from citizen where country in ('usa');
+select * from citizen where country in ('usa','India');
+select * from citizen where 'usa' in (country);
+select * from citizen where country not in ('usa');
+
+26. select * from citizen limit 2;
+select * from citizen limit 2 offset 2;
+
