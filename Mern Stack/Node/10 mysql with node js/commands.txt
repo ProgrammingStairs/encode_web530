@@ -115,3 +115,52 @@ select * from citizen where country not in ('usa');
 26. select * from citizen limit 2;
 select * from citizen limit 2 offset 2;
 
+27. select * from citizen where age between 40 and 70;
+select * from citizen where age not between 40 and 70;
+
+28. select sum(age) from citizen;
+select sum(age) as Sum from citizen;
+select avg(age) as Average from citizen;
+select min(age) as Min_age from citizen;
+select max(age) as Max_age from citizen;
+
+29. select * from citizen order by country;
+select * from citizen order by fname;
+select * from citizen order by fname asc;
+select * from citizen order by fname desc;
+select * from citizen order by age desc;
+
+select * from citizen where country like 'u_';
+select * from citizen where country like 'us_';
+select * from citizen where country like 'u%';
+select * from citizen where country like '%u';
+select * from citizen where country like '%a%';
+select * from citizen where lname like '%a%';
+
+select * from citizen where fname is null;
+select * from citizen where fname is not null;
+
+select country,count(*) as 'No.of Citizen' from citizen group by country;
+
+select country,count(*) as 'No.of Citizen' from citizen group by country having count(*)>1;
+
+select * from citizen where age = (select min(age) from citizen);
+select * from citizen where age >= (select min(age) from citizen);
+
+create table user_demo(user_id int not null, pincode int not null, foreign key (user_id) references citizen(cid));
+
+insert into user_demo(user_id,pincode) values(1,452010);
+insert into user_demo(user_id,pincode) values(2,452011);
+insert into user_demo(user_id,pincode) values(3,452012);
+
+delete from citizen where cid=3; // error 
+delete from user_demo where user_id=3;
+
+drop table user_demo;
+create table user_demo(user_id int not null, pincode int not null, foreign key (user_id) references citizen(cid) on delete cascade on update cascade);
+
+insert into user_demo(user_id,pincode) values(1,452010);
+insert into user_demo(user_id,pincode) values(2,452011);
+insert into user_demo(user_id,pincode) values(4,452012);
+
+delete from citizen where cid=2; 
