@@ -1,27 +1,24 @@
 var http = require("http"); // type:"commonjs"
 var {status,type} = require("./utility/utils.js");
 var fs = require("fs");
-var url = require('url');
 var dotenv = require('dotenv');
 dotenv.config();
 
 var instance = http.createServer((request,response)=>{
     response.writeHead(status.SUCCESS,type.TYPE);
-    //http://localhost:3000/home?a=100&b=200
-    var requestedURL = url.parse(request.url).pathname;
-    if(requestedURL=='/' || requestedURL=='/home'){
+    if(request.url=='/' || request.url=='/home'){
         var data = fs.readFileSync("home.html",'utf-8');
             response.write(data);
     }
-    else if(requestedURL=='/about'){
+    else if(request.url=='/about'){
         var data = fs.readFileSync("about.html",'utf-8');
             response.write(data);
     }
-    else if(requestedURL=='/contact'){
+    else if(request.url=='/contact'){
         var data = fs.readFileSync("contact.html",'utf-8');
             response.write(data);
     }
-    else if(requestedURL=='/services'){
+    else if(request.url=='/services'){
         var data = fs.readFileSync("services.html",'utf-8');
             response.write(data);
     }
