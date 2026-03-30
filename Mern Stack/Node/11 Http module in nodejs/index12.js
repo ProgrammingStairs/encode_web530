@@ -18,8 +18,7 @@ var instance = http.createServer((request,response)=>{
     var a = parseInt(requestedURL.query.a);
     var b = parseInt(requestedURL.query.b);
     console.log("Sum : "+(a+b));
-    
-        
+
 });
 instance.listen(process.env.PORT,()=>{
     console.log("Connection established successfully");

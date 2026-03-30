@@ -4,5 +4,5 @@ const status = {
 const type = {
     TYPE : {'content-type':'text/html'}
 }
-module.exports = {status,type}
-// export {status,type}; // named export
+// module.exports = {status,type}
+export {status,type}; // named export

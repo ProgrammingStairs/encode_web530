@@ -1,188 +1,35 @@
-Command line client : 
-Enter password : root (enter)
+1. count duplicate elements in an array
 
-mysql> 
+2.  1 2 3 4 5 6
+  o/p: 4 5 6 1 2 3
 
-Command Prompt : 
-C://program files// MySQL // MySQL server // bin 
-on path we need to write cmd and hit enter
+3. Move all zeros at the end
 
-command prompt opens with 
-C://program files// MySQL // MySQL server // bin > MySQL -uroot -p enter
-> Enter password : root (enter)
+4. Mobile, email , password regular expression
 
-mysql> 
-
-Commands : 
-1. show databases;
-2. create database mysql530;
-3. create database if not exists mysql530;
-4. use mysql530;
-5. show tables;
-6. create database if not exists mysql5301;
-7. drop database mysql5301;
-8. use mysql530;
-   create table user(uid int not null,name varchar(45) not null,address varchar(45), percentage double default 0);
-   show tables;
-9. desc user;
-10. show columns from user; 
-11. create table usernew(uid int not null,name varchar(45) not null,address varchar(45), percentage double default 0);
-
-create table if not exists usernew(uid int not null,name varchar(45) not null,address varchar(45), percentage double default 0);
-
-12. drop table usernew;
-    drop database mysql530;
-
-13. create database if not exists mysql530;
-    use mysql530;
-    create table if not exists user(uid int not null,name varchar(45) not null,address varchar(45), percentage double default 0);
-    desc user;
-    alter table user add status varchar(45);
-    alter table user add status1 varchar(45) not null;
-    alter table user add status2 varchar(45) after address;
-    alter table user modify status2 varchar(100);
-    alter table user drop column status2;
-    alter table user rename column status1 to status_new;
-    alter table user rename user_new;
-    desc user_new;
-    alter table user_new add column user_id int not null first;
-    
-14. create table if not exists user(uid int not null,name varchar(45) not null,address varchar(45), percentage double default 0);
-
-insert into user(uid,name,address,percentage) values(101,'Andrew Anderson',"Indore, Madhya Pradesh",56.56);
-
-select * from user;
-
-insert into user values(102,'Peter parker',"Indore, Madhya Pradesh",98);
-
-// this command not works
-insert into user values(103,'Jack Jackson',"Indore, Madhya Pradesh");
-
-insert into user(uid,name,address) values(103,'Jack Jackson',"Indore, Madhya Pradesh");
-
-insert into user(uid,name) values(103,"jackky");
-
-15. create table citizen(cid int primary key auto_increment,fname varchar(45) not null, lname varchar(45) not null, age int not null, country varchar(45) not null);
-
-16. insert into citizen(fname,lname,age,country) values ("Andrew","Anderson",56,"USA");
-    select * from citizen;
-
-17. insert into citizen(fname,lname,age,country) values ("Peter","Parker",32,"USA"),("Mathew","Math",32,"USA"),("Jack","Jackson",59,"DUBAI"),("Simon","Sim",26,"INDIA");
-
-18. select cid,fname,lname,age,country from citizen;
-select cid from citizen;
-select cid,fname from citizen;
-select cid,fname,lname from citizen;
-select cid,fname,lname,age from citizen;
-select cid,country from citizen;
-
-19. select * from citizen where cid=3;
-select * from citizen where country='usa';
-
-20. update citizen set fname='Andrew andy' where fname='andrew';
-update citizen set fname='Andrew' where cid=1;
-update citizen set age=50 where country='USA';
-update citizen set age=18;
-
-21. delete from citizen where cid=3; 
-    delete from citizen;
-
-    insert into citizen(fname,lname,age,country) values ("Peter","Parker",32,"USA"),("Mathew","Math",32,"USA"),("Jack","Jackson",59,"DUBAI"),("Simon","Sim",26,"INDIA");
-
-    truncate table citizen;    
-
-22. select cid as 'S.NO',fname as 'First Name',lname as 'Last Name',age as Age,country as Country from citizen;
-
-select cid as 'S.NO',concat(fname,' ',lname) as 'Full Name',age as Age,country as Country from citizen;
-
-23. select Distinct country from citizen;
-select Distinct country,fname from citizen;
-select count(Distinct country) from citizen;
-select count(Distinct country) as 'Unique Countries' from citizen;
-
-24. select * from citizen where cid=1 and country='India';
-select * from citizen where cid=1 or country='India';
-select * from citizen where cid=4 and country='India';
-select * from citizen where not cid=1;
-select * from citizen where not cid=1 and not country='usa';
-select * from citizen where not cid=1 or not country='usa';
-
-25. select * from citizen where country in ('usa');
-select * from citizen where country in ('usa','India');
-select * from citizen where 'usa' in (country);
-select * from citizen where country not in ('usa');
-
-26. select * from citizen limit 2;
-select * from citizen limit 2 offset 2;
-
-27. select * from citizen where age between 40 and 70;
-select * from citizen where age not between 40 and 70;
-
-28. select sum(age) from citizen;
-select sum(age) as Sum from citizen;
-select avg(age) as Average from citizen;
-select min(age) as Min_age from citizen;
-select max(age) as Max_age from citizen;
-
-29. select * from citizen order by country;
-select * from citizen order by fname;
-select * from citizen order by fname asc;
-select * from citizen order by fname desc;
-select * from citizen order by age desc;
-
-select * from citizen where country like 'u_';
-select * from citizen where country like 'us_';
-select * from citizen where country like 'u%';
-select * from citizen where country like '%u';
-select * from citizen where country like '%a%';
-select * from citizen where lname like '%a%';
-
-select * from citizen where fname is null;
-select * from citizen where fname is not null;
-
-select country,count(*) as 'No.of Citizen' from citizen group by country;
-
-select country,count(*) as 'No.of Citizen' from citizen group by country having count(*)>1;
-
-select * from citizen where age = (select min(age) from citizen);
-select * from citizen where age >= (select min(age) from citizen);
-
-create table user_demo(user_id int not null, pincode int not null, foreign key (user_id) references citizen(cid));
-
-insert into user_demo(user_id,pincode) values(1,452010);
-insert into user_demo(user_id,pincode) values(2,452011);
-insert into user_demo(user_id,pincode) values(3,452012);
-
-delete from citizen where cid=3; // error 
-delete from user_demo where user_id=3;
-
-drop table user_demo;
-create table user_demo(user_id int not null, pincode int not null, foreign key (user_id) references citizen(cid) on delete cascade on update cascade);
-
-insert into user_demo(user_id,pincode) values(1,452010);
-insert into user_demo(user_id,pincode) values(2,452011);
-insert into user_demo(user_id,pincode) values(4,452012);
-
-delete from citizen where cid=2; 
-
-30. create table customer(cust_id int not null,cust_name varchar(45) not null);
-create table orders(order_id int not null,cust_id int not null,amount double not null);
-
-insert into customer(cust_id,cust_name) values(101,"Andrew Anderson"),(102,"Peter Parker"),(103,"Jack Jackson"),(104,"Mathew Math");
-
-insert into orders(order_id,cust_id,amount) values(1,101,5000),(2,103,7500);
-
-select customer.cust_id, customer.cust_name, orders.order_id, orders.amount from customer join orders 
-on customer.cust_id = orders.cust_id;
-
-select customer.cust_id, customer.cust_name, orders.order_id, orders.amount from customer inner join orders on customer.cust_id = orders.cust_id;
-
-select customer.cust_id, customer.cust_name, orders.order_id, orders.amount from customer left join orders on customer.cust_id = orders.cust_id;
-
-select customer.cust_id, customer.cust_name, orders.order_id, orders.amount from customer right join orders on customer.cust_id = orders.cust_id;
-
-select customer.cust_id, customer.cust_name, orders.order_id, orders.amount from customer cross join orders;
-
-
-
-
+5. Ajax to fetch d print 
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  }
+]
