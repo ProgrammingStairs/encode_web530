@@ -1,7 +1,6 @@
 import http from "http"; // type:"module"
 import { status, type } from "./utility/utils.js";
 import fs from "fs";
-import qs from 'querystring';
 import url from "url";
 import dotenv from 'dotenv';
 dotenv.config();
@@ -23,18 +22,12 @@ var instance = http.createServer((request, response) => {
     } 
     else if (requestedURL.pathname == '/viewInfo') {
     response.writeHead(status.SUCCESS, type.TYPE);
-        var chunkData='';    
-        request.on('data',(chunk)=>{
-            chunkData+=chunk;
-        });
-        request.on('end',()=>{
-            var data = qs.parse(chunkData);
-            response.write("<br>Username : "+data.username);
-            response.write("<br>Email : "+data.email);
-            response.write("<br>Password : "+data.password);
-            response.write("<br>Address : "+data.address);
-            response.end();
-        });
+        var data = requestedURL.query;
+        response.write("<br>Username : "+data.username);
+        response.write("<br>Email : "+data.email);
+        response.write("<br>Password : "+data.password);
+        response.write("<br>Address : "+data.address);
+        response.end();
     }
 });
 instance.listen(process.env.PORT, () => {
