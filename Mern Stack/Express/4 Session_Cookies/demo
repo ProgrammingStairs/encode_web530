@@ -1,0 +1,19 @@
+Node : 
+
+form action="/viewInfo" method="post"
+
+app.js 
+
+chunkdata=''
+request.on('data',(chunk)=>{
+    chunkdata+=chunk
+})
+
+request.on('end',()=>{
+    qs.parse(chunkdata)
+})
+
+var requestedURL = url.parse(request.url,true)
+var data = requestedURL.query
+data.username
+data.email
