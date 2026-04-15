@@ -18,9 +18,12 @@ When we use sessions the data is stored in the browser as a cookie. The cookie u
 Once the session cookie is set, every subsequent request to the server verifies the authenticity of the cookie by unsigning it using the same secret key. If secret key fails to unsign the cookie then its content is discarded and a new session cookie is sent to the browser.
 
 saveUninitialized : Forces a session that is "uninitialized" to be saved to the store. Choosing false will also help with race conditions where a client makes multiple parallel requests without a session.
+It means You have created a session, but haven't add anything inside request.session.
+
 The default value is true, but using the default has been deprecated, as the default will change in the future. 
 
 resave : Forces the session to be saved back to the session store, even if the session was never modified during the request. The default value is true, but using the default has been deprecated, as the default will change in the future.
+It means, request.session.email is not modified in next request.
 
 req.session : To store or access session data, simply use the request property req.session
 
