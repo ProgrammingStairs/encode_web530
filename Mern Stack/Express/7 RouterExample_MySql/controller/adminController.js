@@ -32,3 +32,15 @@ export const adminLogoutController = (request,response)=>{
         console.log("Error occured : ",error);
     }
 }
+
+export const adminUserListController = (request,response)=>{
+    try{
+        const query = "select * from user";
+        con.query(query,(error,result)=>{
+            // console.log("result : ",result);
+            response.render("adminUserList.ejs",{email:request.session.email,result});
+        })
+    }catch(error){
+        console.log("Error occured in admin userlist controller : ",error);
+    }
+}

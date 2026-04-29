@@ -16,6 +16,9 @@
     </center>
     <blockquote>
         <h3>Admin User List | <%=email%></h3>
+        <% if(result.length==0){%>
+            <h3>No Record Found</h3> 
+        <%}else{%>
         <table border="1" cellspacing="0" cellpadding="8">
             <tr>
                 <th>S.No</th>
@@ -24,7 +27,17 @@
                 <th>password</th>
                 <th>Address</th>
             </tr>
+            <% result.forEach((obj,index)=>{%>
+                    <tr>
+                        <td><%= index+1 %></td>
+                        <td><%= obj.username %></td>
+                        <td><%= obj.email %></td>
+                        <td><%= obj.password %></td>
+                        <td><%= obj.address %></td>
+                    </tr>
+            <%}) %>
         </table>
+        <%}%>
     </blockquote>
 </body>
 </html>

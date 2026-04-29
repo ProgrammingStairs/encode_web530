@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+     <%- include('./userHeader.ejs')%>  
+    <blockquote>
+        <h2>AddToDo Task</h2>
+        <form action="/user/register" method="post">
+            <select name="category" id="category">
+                <option value="">Select Category</option>
+                <option value="Education">Education</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Vacation">Vacation</option>
+                <option value="Pending Work">Pending Work</option>
+            </select><br>
+            <input
+                type="text"
+                placeholder="Enter Task"
+                id="task"
+                name="task"
+                required
+            > <br>
+            <textarea
+                placeholder="Enter Description"
+                id="description"
+                name="description"
+                required
+            ></textarea> <br>            
+            <select name="priority" id="priority">
+                <option value="">Select Priority</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+                <option value="Extreme">Extreme</option>
+            </select><br>
+            
+            <input
+                type="submit"
+                value="Add To Do"
+            ><input
+                type="reset"
+                value="Reset"
+            ><br>
+        </form>
+    </blockquote>
+    </center>
+</body>
+</html>

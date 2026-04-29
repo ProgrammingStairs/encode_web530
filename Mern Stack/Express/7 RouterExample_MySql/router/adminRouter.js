@@ -1,5 +1,5 @@
 import express from 'express';
-import { adminLoginController, adminLogoutController } from '../controller/adminController.js';
+import { adminLoginController, adminLogoutController,adminUserListController } from '../controller/adminController.js';
 var adminRouter = express.Router();
 
 adminRouter.use((request,response,next)=>{
@@ -12,9 +12,7 @@ adminRouter.get("/",(request,response)=>{
 adminRouter.get("/login",(request,response)=>{
     response.render("adminLogin.ejs",{message:""});
 });
-adminRouter.get("/userList",(request,response)=>{
-    response.render("adminUserList.ejs",{message:"",email:request.session.email});
-});
+adminRouter.get("/userList",adminUserListController);
 
 adminRouter.post("/login",adminLoginController);
 adminRouter.get("/logout",adminLogoutController);
