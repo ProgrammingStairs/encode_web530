@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <center>
+            <%- include('./userHeader.ejs')%>  
+    </center>
+    <% if(viewToDoArray.length==0){%>
+        No Record Found    
+    <%} else { %>
+        <table align="center" border="1" cellspacing="0" cellpadding="8">
+            <tr>
+                <th>S.No</th>
+                <th>Category</th>
+                <th>Task</th>
+                <th>Description</th>
+                <th>Priority</th>
+            </tr>
+            <% viewToDoArray.forEach((todoObj,index)=>{%>
+                <tr>
+                    <td><%=index+1%></td>
+                    <td><%=todoObj.category%></td>
+                    <td><%=todoObj.task%></td>
+                    <td><%=todoObj.description%></td>
+               <td>
+    <div style="text-align: center;border-radius: 10px;width:60px;padding:2px;color:white;background-color:<%= 
+        todoObj.priority === 'High' ? 'tomato' :
+        todoObj.priority === 'Medium' ? 'orange' :
+        todoObj.priority === 'Extreme' ? 'red' :
+        todoObj.priority === 'low' ? 'green' : 'green'
+    %>">
+        <%= todoObj.priority %>
+               </div>
+</td>
+                </tr>
+            <%}) %>
+        </table>
+    <%}%>
+</body>
+</html>

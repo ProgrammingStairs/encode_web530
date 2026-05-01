@@ -1,5 +1,5 @@
 import express from 'express';
-import { userRegisterController,userLoginController } from '../controller/userController.js';
+import { userRegisterController,userLoginController,userAddToDoController,viewToDoController,userLogoutController } from '../controller/userController.js';
 var userRouter = express.Router();
 
 userRouter.use((request,response,next)=>{
@@ -18,8 +18,11 @@ userRouter.get("/register",(request,response)=>{
 userRouter.get("/addToDo",(request,response)=>{
     response.render("addToDo.ejs");
 });
+userRouter.get("/viewToDo",viewToDoController);
 
 userRouter.post("/register",userRegisterController);
 userRouter.post("/login",userLoginController);
+userRouter.post("/addToDo",userAddToDoController);
+userRouter.get("/logout",userLogoutController);
 
 export default userRouter;
